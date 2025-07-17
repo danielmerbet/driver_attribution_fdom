@@ -8,7 +8,7 @@ dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 data <- read.csv(paste0(dir, "data/data.csv"))
 data$date <- as.Date(data$date)
 best_predictor <- F
-only_reanalysis <- T
+only_reanalysis <- F
 plot_percent <- F
 
 #select only relevant drivers:
