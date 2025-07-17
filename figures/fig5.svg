@@ -26,15 +26,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.43108765"
-     inkscape:cx="766.66543"
-     inkscape:cy="620.52346"
+     inkscape:zoom="0.304825"
+     inkscape:cx="355.94193"
+     inkscape:cy="250.96367"
      inkscape:window-width="1834"
      inkscape:window-height="1016"
      inkscape:window-x="86"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g10540" />
   <defs
      id="defs2416">
     <clipPath
@@ -902,7 +902,7 @@
        x="181.35663"
        y="58.561451"
        id="text10102"
-       inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/figs5.png"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
@@ -916,7 +916,7 @@
        x="-1.5332731"
        y="57.829174"
        id="text11792"
-       inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/figs5.png"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
@@ -928,7 +928,7 @@
        id="g3845"
        inkscape:label="partial_dependence_plots"
        transform="matrix(0.35277777,0,0,-0.35277777,114.56491,237.86148)"
-       inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/figs5.png"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/figs5.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
       <g
@@ -1588,7 +1588,10 @@
       <g
          id="g5253-3"
          inkscape:label="partial_dependence_plots"
-         transform="translate(-500.98387,-15.505622)">
+         transform="translate(-500.98387,-15.505622)"
+         inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+         inkscape:export-xdpi="300"
+         inkscape:export-ydpi="300">
         <g
            id="g5255-6" />
         <g
@@ -1598,16 +1601,7 @@
         <g
            id="g5261-3" />
         <g
-           id="g5263-5">
-          <g
-             id="g5265-6"
-             clip-path="url(#clipPath5269)">
-            <path
-               d="M 0,378 H 252 V 504 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path5271" />
-          </g>
-        </g>
+           id="g5263-5" />
         <g
            id="g5273" />
         <g
@@ -1615,10 +1609,6 @@
           <g
              id="g5277"
              clip-path="url(#clipPath5281)">
-            <path
-               d="m 33.48,409.91 h 213.04 v 88.61 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path5283" />
             <path
                d="m 41.21,438.39 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -2013,16 +2003,7 @@
         <g
            id="g5511-1" />
         <g
-           id="g5513-2">
-          <text
-             transform="matrix(1,0,0,-1,131.75,385.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text5517"><tspan
-               x="0 5.5 13.442"
-               y="0"
-               sodipodi:role="line"
-               id="tspan5515">swt</tspan></text>
-        </g>
+           id="g5513-2" />
         <g
            id="g5519-7" />
         <g
@@ -2081,16 +2062,7 @@
         <g
            id="g5569" />
         <g
-           id="g5571">
-          <g
-             id="g5573-6"
-             clip-path="url(#clipPath5577)">
-            <path
-               d="M 252,378 H 504 V 504 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path5579" />
-          </g>
-        </g>
+           id="g5571" />
         <g
            id="g5581-2" />
         <g
@@ -2098,10 +2070,6 @@
           <g
              id="g5585-1"
              clip-path="url(#clipPath5589)">
-            <path
-               d="m 285.48,409.91 h 213.04 v 88.61 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path5591" />
             <path
                d="m 293.21,474.05 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -2496,17 +2464,6 @@
         <g
            id="g5819" />
         <g
-           id="g5821">
-          <text
-             transform="matrix(1,0,0,-1,387.42,385.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text5825"><tspan
-               x="0 5.5"
-               y="0"
-               sodipodi:role="line"
-               id="tspan5823">sr</tspan></text>
-        </g>
-        <g
            id="g5827" />
         <g
            id="g5829">
@@ -2564,16 +2521,7 @@
         <g
            id="g5877" />
         <g
-           id="g5879">
-          <g
-             id="g5881"
-             clip-path="url(#clipPath5885)">
-            <path
-               d="M 0,252 H 252 V 378 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path5887" />
-          </g>
-        </g>
+           id="g5879" />
         <g
            id="g5889" />
         <g
@@ -2581,10 +2529,6 @@
           <g
              id="g5893"
              clip-path="url(#clipPath5897)">
-            <path
-               d="m 33.48,283.91 h 213.04 v 88.61 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path5899" />
             <path
                d="m 41.21,332.37 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -2978,17 +2922,6 @@
         <g
            id="g6127" />
         <g
-           id="g6129">
-          <text
-             transform="matrix(1,0,0,-1,126.55,259.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text6133"><tspan
-               x="0 5.5 8.5579996 14.674 20.790001"
-               y="0"
-               sodipodi:role="line"
-               id="tspan6131">st100</tspan></text>
-        </g>
-        <g
            id="g6135" />
         <g
            id="g6137">
@@ -3046,16 +2979,7 @@
         <g
            id="g6185" />
         <g
-           id="g6187">
-          <g
-             id="g6189"
-             clip-path="url(#clipPath6193)">
-            <path
-               d="M 252,252 H 504 V 378 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path6195" />
-          </g>
-        </g>
+           id="g6187" />
         <g
            id="g6197" />
         <g
@@ -3063,10 +2987,6 @@
           <g
              id="g6201"
              clip-path="url(#clipPath6205)">
-            <path
-               d="m 285.48,283.91 h 213.04 v 88.61 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path6207" />
             <path
                d="m 293.21,316.67 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -3458,17 +3378,6 @@
         <g
            id="g6433" />
         <g
-           id="g6435">
-          <text
-             transform="matrix(1,0,0,-1,378.55,259.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text6439"><tspan
-               x="0 5.5 8.5579996 14.674 20.790001"
-               y="0"
-               sodipodi:role="line"
-               id="tspan6437">st255</tspan></text>
-        </g>
-        <g
            id="g6441" />
         <g
            id="g6443">
@@ -3526,16 +3435,7 @@
         <g
            id="g6491" />
         <g
-           id="g6493">
-          <g
-             id="g6495"
-             clip-path="url(#clipPath6499)">
-            <path
-               d="M 0,126 H 252 V 252 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path6501" />
-          </g>
-        </g>
+           id="g6493" />
         <g
            id="g6503" />
         <g
@@ -3543,10 +3443,6 @@
           <g
              id="g6507"
              clip-path="url(#clipPath6511)">
-            <path
-               d="m 33.48,157.91 h 213.04 v 88.61 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path6513" />
             <path
                d="m 41.21,209.38 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -3918,17 +3814,6 @@
         <g
            id="g6729" />
         <g
-           id="g6731">
-          <text
-             transform="matrix(1,0,0,-1,123.49,133.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text6735"><tspan
-               x="0 5.5 14.663 20.778999 26.895"
-               y="0"
-               sodipodi:role="line"
-               id="tspan6733">sm100</tspan></text>
-        </g>
-        <g
            id="g6737" />
         <g
            id="g6739">
@@ -3986,16 +3871,7 @@
         <g
            id="g6787" />
         <g
-           id="g6789">
-          <g
-             id="g6791"
-             clip-path="url(#clipPath6795)">
-            <path
-               d="M 252,126 H 504 V 252 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path6797" />
-          </g>
-        </g>
+           id="g6789" />
         <g
            id="g6799" />
         <g
@@ -4003,10 +3879,6 @@
           <g
              id="g6803"
              clip-path="url(#clipPath6807)">
-            <path
-               d="m 285.48,157.91 h 213.04 v 88.61 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path6809" />
             <path
                d="m 293.21,229.76 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -4426,17 +4298,6 @@
         <g
            id="g7049" />
         <g
-           id="g7051">
-          <text
-             transform="matrix(1,0,0,-1,375.49,133.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text7055"><tspan
-               x="0 5.5 14.663 20.778999 26.895"
-               y="0"
-               sodipodi:role="line"
-               id="tspan7053">sm255</tspan></text>
-        </g>
-        <g
            id="g7057" />
         <g
            id="g7059">
@@ -4494,16 +4355,7 @@
         <g
            id="g7107" />
         <g
-           id="g7109">
-          <g
-             id="g7111"
-             clip-path="url(#clipPath7115)">
-            <path
-               d="M 0,0 H 252 V 126 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path7117" />
-          </g>
-        </g>
+           id="g7109" />
         <g
            id="g7119" />
         <g
@@ -4511,10 +4363,6 @@
           <g
              id="g7123"
              clip-path="url(#clipPath7127)">
-            <path
-               d="m 33.48,31.91 h 213.04 v 88.61 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path7129" />
             <path
                d="m 41.21,68.94 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -4909,17 +4757,6 @@
         <g
            id="g7357" />
         <g
-           id="g7359">
-          <text
-             transform="matrix(1,0,0,-1,118.3,7.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text7363"><tspan
-               x="0 6.1160002 12.232 17.732 23.848 29.964001 37.905998 40.348"
-               y="0"
-               sodipodi:role="line"
-               id="tspan7361">doc_gwlf</tspan></text>
-        </g>
-        <g
            id="g7365" />
         <g
            id="g7367">
@@ -4977,16 +4814,7 @@
         <g
            id="g7415" />
         <g
-           id="g7417">
-          <g
-             id="g7419"
-             clip-path="url(#clipPath7423)">
-            <path
-               d="M 252,0 H 504 V 126 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path7425" />
-          </g>
-        </g>
+           id="g7417" />
         <g
            id="g7427" />
         <g
@@ -4994,10 +4822,6 @@
           <g
              id="g7431"
              clip-path="url(#clipPath7435)">
-            <path
-               d="m 285.48,31.91 h 213.04 v 88.61 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path7437" />
             <path
                d="m 293.21,39.9 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -5405,17 +5229,6 @@
         <g
            id="g7671" />
         <g
-           id="g7673">
-          <text
-             transform="matrix(1,0,0,-1,377.8,7.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text7677"><tspan
-               x="0 5.5 11 17.115999 22.902"
-               y="0"
-               sodipodi:role="line"
-               id="tspan7675">cyday</tspan></text>
-        </g>
-        <g
            id="g7679" />
         <g
            id="g7681">
@@ -5472,6 +5285,127 @@
            id="g7727" />
         <g
            id="g7729" />
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="339.85547"
+           y="-389.19241"
+           id="text21255-9"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan21253-7"
+             style="stroke-width:0.75"
+             x="339.85547"
+             y="-389.19241">Solar Radiation (w/m²)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="50.496841"
+           y="-262.29083"
+           id="text20553-5-6"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-1"
+             style="stroke-width:0.75"
+             x="50.496841"
+             y="-262.29083">Soil Temperature at 28-100cm (°C)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="300.3508"
+           y="-260.49701"
+           id="text20553-5-5-0"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-6-6"
+             style="stroke-width:0.75"
+             x="300.3508"
+             y="-260.49701">Soil Temperature at 100-255 cm (°C)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="52.466339"
+           y="-137.47856"
+           id="text20553-5-2-5"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-9-03"
+             style="stroke-width:0.75"
+             x="52.466339"
+             y="-137.47856">Soil Moisture at 28-100cm (m³/m³)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="680.27258"
+           y="-346.09753"
+           id="text20553-5-2-5-2"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-9-03-7"
+             style="stroke-width:0.75"
+             x="680.27258"
+             y="-346.09753" /></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="300.53979"
+           y="-135.90605"
+           id="text20553-5-5-1-9-8"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-6-2-3-4"
+             style="stroke-width:0.75"
+             x="300.53979"
+             y="-135.90605">Soil Moisture at 100-255 cm (m³/m³)</tspan></text>
+        <g
+           id="g68772"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/training_fdom/sau/output/figs5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"
+           transform="translate(-8.3278479,-0.94324413)">
+          <g
+             id="g10239-5"
+             transform="translate(10.008317,2.9833881)">
+            <text
+               transform="scale(1,-1)"
+               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text10243-9"
+               x="103.87172"
+               y="-6.6803746"><tspan
+                 sodipodi:role="line"
+                 id="tspan10241-2"
+                 x="103.87172"
+                 y="-6.6803746">DOC (mg/L)</tspan></text>
+          </g>
+        </g>
+        <text
+           transform="scale(1,-1)"
+           style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text10557-1"
+           x="365.98856"
+           y="-9.4439001"><tspan
+             sodipodi:role="line"
+             id="tspan10555-2"
+             x="365.98856"
+             y="-9.4439001">Julian day</tspan></text>
       </g>
       <g
          id="g8976"
@@ -5486,27 +5420,15 @@
         <g
            id="g8984" />
         <g
-           id="g8986">
-          <g
-             id="g8988"
-             clip-path="url(#clipPath8992)">
-            <path
-               d="M 0,336 H 252 V 504 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path8994" />
-          </g>
-        </g>
-        <g
            id="g8996" />
         <g
-           id="g8998">
+           id="g8998"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g9000"
              clip-path="url(#clipPath9004)">
-            <path
-               d="M 33.48,367.91 H 246.52 V 498.52 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path9006" />
             <path
                d="m 41.21,392.78 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -5744,14 +5666,20 @@
         <g
            id="g9134" />
         <g
-           id="g9136">
+           id="g9136"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,367.91 V 498.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9138" />
         </g>
         <g
-           id="g9140">
+           id="g9140"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,18.54,370.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -5788,7 +5716,10 @@
         <g
            id="g9158" />
         <g
-           id="g9160">
+           id="g9160"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 30.74,373.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -5823,14 +5754,20 @@
         <g
            id="g9184" />
         <g
-           id="g9186">
+           id="g9186"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,367.91 H 246.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9188" />
         </g>
         <g
-           id="g9190">
+           id="g9190"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 52.23,365.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -5851,7 +5788,10 @@
         <g
            id="g9200" />
         <g
-           id="g9202">
+           id="g9202"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,33.34,356.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -5902,19 +5842,12 @@
         <g
            id="g9234" />
         <g
-           id="g9236">
-          <text
-             transform="matrix(1,0,0,-1,137.25,343.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text9240"><tspan
-               x="0"
-               y="0"
-               id="tspan9238">v</tspan></text>
-        </g>
-        <g
            id="g9242" />
         <g
-           id="g9244">
+           id="g9244"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,13.38,382.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -5969,27 +5902,15 @@
         <g
            id="g9292" />
         <g
-           id="g9294">
-          <g
-             id="g9296"
-             clip-path="url(#clipPath9300)">
-            <path
-               d="M 252,336 H 504 V 504 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path9302" />
-          </g>
-        </g>
-        <g
            id="g9304" />
         <g
-           id="g9306">
+           id="g9306"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g9308"
              clip-path="url(#clipPath9312)">
-            <path
-               d="M 285.48,367.91 H 498.52 V 498.52 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path9314" />
             <path
                d="m 293.21,380.63 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6227,14 +6148,20 @@
         <g
            id="g9442" />
         <g
-           id="g9444">
+           id="g9444"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,367.91 V 498.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9446" />
         </g>
         <g
-           id="g9448">
+           id="g9448"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,270.54,370.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6271,7 +6198,10 @@
         <g
            id="g9466" />
         <g
-           id="g9468">
+           id="g9468"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 282.74,373.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6306,14 +6236,20 @@
         <g
            id="g9492" />
         <g
-           id="g9494">
+           id="g9494"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,367.91 H 498.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9496" />
         </g>
         <g
-           id="g9498">
+           id="g9498"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 341.22,365.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6330,7 +6266,10 @@
         <g
            id="g9506" />
         <g
-           id="g9508">
+           id="g9508"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,336.22,356.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6373,20 +6312,14 @@
         <g
            id="g9536" />
         <g
-           id="g9538">
-          <text
-             transform="matrix(1,0,0,-1,378.55,343.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text9542"><tspan
-               x="0 5.5 8.5579996 14.674 20.790001"
-               y="0"
-               sodipodi:role="line"
-               id="tspan9540">st255</tspan></text>
-        </g>
+           id="g9538" />
         <g
            id="g9544" />
         <g
-           id="g9546">
+           id="g9546"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,265.38,382.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6441,27 +6374,15 @@
         <g
            id="g9594" />
         <g
-           id="g9596">
-          <g
-             id="g9598"
-             clip-path="url(#clipPath9602)">
-            <path
-               d="M 0,168 H 252 V 336 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path9604" />
-          </g>
-        </g>
-        <g
            id="g9606" />
         <g
-           id="g9608">
+           id="g9608"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g9610"
              clip-path="url(#clipPath9614)">
-            <path
-               d="M 33.48,199.91 H 246.52 V 330.52 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path9616" />
             <path
                d="m 41.21,213.97 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6699,14 +6620,20 @@
         <g
            id="g9744" />
         <g
-           id="g9746">
+           id="g9746"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,199.91 V 330.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9748" />
         </g>
         <g
-           id="g9750">
+           id="g9750"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,18.54,202.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6743,7 +6670,10 @@
         <g
            id="g9768" />
         <g
-           id="g9770">
+           id="g9770"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 30.74,205.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6778,14 +6708,20 @@
         <g
            id="g9794" />
         <g
-           id="g9796">
+           id="g9796"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,199.91 H 246.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path9798" />
         </g>
         <g
-           id="g9800">
+           id="g9800"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 46.06,197.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -6806,7 +6742,10 @@
         <g
            id="g9810" />
         <g
-           id="g9812">
+           id="g9812"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,37.3,188.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6857,20 +6796,12 @@
         <g
            id="g9844" />
         <g
-           id="g9846">
-          <text
-             transform="matrix(1,0,0,-1,123.49,175.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text9850"><tspan
-               x="0 5.5 14.663 20.778999 26.895"
-               y="0"
-               sodipodi:role="line"
-               id="tspan9848">sm100</tspan></text>
-        </g>
-        <g
            id="g9852" />
         <g
-           id="g9854">
+           id="g9854"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,13.38,214.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -6925,27 +6856,15 @@
         <g
            id="g9902" />
         <g
-           id="g9904">
-          <g
-             id="g9906"
-             clip-path="url(#clipPath9910)">
-            <path
-               d="M 252,168 H 504 V 336 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path9912" />
-          </g>
-        </g>
-        <g
            id="g9914" />
         <g
-           id="g9916">
+           id="g9916"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g9918"
              clip-path="url(#clipPath9922)">
-            <path
-               d="M 285.48,199.91 H 498.52 V 330.52 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path9924" />
             <path
                d="m 293.21,208.8 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7183,14 +7102,20 @@
         <g
            id="g10052" />
         <g
-           id="g10054">
+           id="g10054"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,199.91 V 330.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10056" />
         </g>
         <g
-           id="g10058">
+           id="g10058"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,270.54,202.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -7227,7 +7152,10 @@
         <g
            id="g10076" />
         <g
-           id="g10078">
+           id="g10078"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 282.74,205.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7262,14 +7190,20 @@
         <g
            id="g10102" />
         <g
-           id="g10104">
+           id="g10104"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,199.91 H 498.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10106" />
         </g>
         <g
-           id="g10108">
+           id="g10108"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 288.4,197.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7290,39 +7224,42 @@
         <g
            id="g10118" />
         <g
-           id="g10120">
+           id="g10120"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,277.15,188.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text10124"><tspan
-               x="0 5.0040002 7.506 12.51 17.514"
+               x="0 5.0040002 7.506 12.51"
                y="0"
                sodipodi:role="line"
-               id="tspan10122">0.300</tspan></text>
+               id="tspan10122">0.30</tspan></text>
           <text
              transform="matrix(1,0,0,-1,333.45,188.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text10128"><tspan
-               x="0 5.0040002 7.506 12.51 17.514"
+               x="0 5.0040002 7.506 12.51"
                y="0"
                sodipodi:role="line"
-               id="tspan10126">0.325</tspan></text>
+               id="tspan10126">0.32</tspan></text>
           <text
              transform="matrix(1,0,0,-1,389.75,188.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text10132"><tspan
-               x="0 5.0040002 7.506 12.51 17.514"
+               x="0 5.0040002 7.506 12.51"
                y="0"
                sodipodi:role="line"
-               id="tspan10130">0.350</tspan></text>
+               id="tspan10130">0.35</tspan></text>
           <text
              transform="matrix(1,0,0,-1,446.05,188.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text10136"><tspan
-               x="0 5.0040002 7.506 12.51 17.514"
+               x="0 5.0040002 7.506"
                y="0"
                sodipodi:role="line"
-               id="tspan10134">0.375</tspan></text>
+               id="tspan10134">0.38</tspan></text>
         </g>
         <g
            id="g10138" />
@@ -7341,20 +7278,12 @@
         <g
            id="g10152" />
         <g
-           id="g10154">
-          <text
-             transform="matrix(1,0,0,-1,375.49,175.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text10158"><tspan
-               x="0 5.5 14.663 20.778999 26.895"
-               y="0"
-               sodipodi:role="line"
-               id="tspan10156">sm255</tspan></text>
-        </g>
-        <g
            id="g10160" />
         <g
-           id="g10162">
+           id="g10162"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,265.38,214.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -7409,27 +7338,15 @@
         <g
            id="g10210" />
         <g
-           id="g10212">
-          <g
-             id="g10214"
-             clip-path="url(#clipPath10218)">
-            <path
-               d="M 0,0 H 252 V 168 H 0 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10220" />
-          </g>
-        </g>
-        <g
            id="g10222" />
         <g
-           id="g10224">
+           id="g10224"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g10226"
              clip-path="url(#clipPath10230)">
-            <path
-               d="M 33.48,31.91 H 246.52 V 162.52 H 33.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path10232" />
             <path
                d="m 41.21,73.96 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7667,14 +7584,20 @@
         <g
            id="g10360" />
         <g
-           id="g10362">
+           id="g10362"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,31.91 V 162.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10364" />
         </g>
         <g
-           id="g10366">
+           id="g10366"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,18.54,34.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -7711,7 +7634,10 @@
         <g
            id="g10384" />
         <g
-           id="g10386">
+           id="g10386"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 30.74,37.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7746,14 +7672,20 @@
         <g
            id="g10410" />
         <g
-           id="g10412">
+           id="g10412"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 33.48,31.91 H 246.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10414" />
         </g>
         <g
-           id="g10416">
+           id="g10416"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 49.87,29.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -7778,7 +7710,10 @@
         <g
            id="g10428" />
         <g
-           id="g10430">
+           id="g10430"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,47.36,20.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -7832,20 +7767,12 @@
         <g
            id="g10466" />
         <g
-           id="g10468">
-          <text
-             transform="matrix(1,0,0,-1,118.3,7.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text10472"><tspan
-               x="0 6.1160002 12.232 17.732 23.848 29.964001 37.905998 40.348"
-               y="0"
-               sodipodi:role="line"
-               id="tspan10470">doc_gwlf</tspan></text>
-        </g>
-        <g
            id="g10474" />
         <g
-           id="g10476">
+           id="g10476"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,13.38,46.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -7900,239 +7827,386 @@
         <g
            id="g10524" />
         <g
-           id="g10526">
-          <g
-             id="g10528"
-             clip-path="url(#clipPath10532)">
-            <path
-               d="M 252,0 H 504 V 168 H 252 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.07;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10534" />
-          </g>
-        </g>
-        <g
            id="g10536" />
         <g
-           id="g10538">
+           id="g10538"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <g
              id="g10540"
              clip-path="url(#clipPath10544)">
             <path
-               d="M 285.48,31.91 H 498.52 V 162.52 H 285.48 Z"
-               style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-               id="path10546" />
-            <path
                d="m 293.21,41.24 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10548" />
+               id="path10548"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 297.08,41.23 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10550" />
+               id="path10550"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 300.95,41.33 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10552" />
+               id="path10552"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 304.83,41.39 c 0,1.08 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.87 1.96,-1.95 0,-1.08 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.87 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10554" />
+               id="path10554"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 308.7,41.51 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10556" />
+               id="path10556"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 312.57,41.46 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10558" />
+               id="path10558"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 316.45,41.45 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10560" />
+               id="path10560"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 320.32,41.67 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10562" />
+               id="path10562"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 324.19,41.76 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10564" />
+               id="path10564"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 328.07,41.78 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10566" />
+               id="path10566"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 331.94,41.79 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10568" />
+               id="path10568"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 335.81,41.79 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10570" />
+               id="path10570"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 339.69,42.06 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10572" />
+               id="path10572"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 343.56,42.29 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10574" />
+               id="path10574"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 347.44,42.35 c 0,1.08 0.87,1.96 1.95,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10576" />
+               id="path10576"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 351.31,43.15 c 0,1.08 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.87 1.96,-1.95 0,-1.08 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.87 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10578" />
+               id="path10578"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 355.18,43.81 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10580" />
+               id="path10580"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 359.06,44.38 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10582" />
+               id="path10582"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 362.93,44.76 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10584" />
+               id="path10584"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 366.8,45.04 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10586" />
+               id="path10586"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 370.68,45.25 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10588" />
+               id="path10588"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 374.55,48.21 c 0,1.08 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.87 1.96,-1.95 0,-1.08 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.87 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10590" />
+               id="path10590"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 378.42,49.06 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10592" />
+               id="path10592"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 382.3,49.2 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10594" />
+               id="path10594"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 386.17,53.84 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10596" />
+               id="path10596"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 390.04,55.99 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10598" />
+               id="path10598"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 393.92,56.77 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10600" />
+               id="path10600"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 397.79,59.57 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10602" />
+               id="path10602"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 401.66,60.61 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10604" />
+               id="path10604"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 405.54,62.35 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10606" />
+               id="path10606"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 409.41,63.86 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10608" />
+               id="path10608"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 413.28,64.6 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10610" />
+               id="path10610"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 417.16,66.35 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10612" />
+               id="path10612"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 421.03,68.49 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10614" />
+               id="path10614"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 424.91,70.79 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10616" />
+               id="path10616"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 428.78,74.12 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10618" />
+               id="path10618"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 432.65,78 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10620" />
+               id="path10620"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 436.53,79.57 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10622" />
+               id="path10622"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 440.4,80.24 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10624" />
+               id="path10624"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 444.27,81.23 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10626" />
+               id="path10626"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 448.15,81.92 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10628" />
+               id="path10628"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 452.02,82.6 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10630" />
+               id="path10630"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 455.89,83.24 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10632" />
+               id="path10632"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 459.77,83.53 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.87 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10634" />
+               id="path10634"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 463.64,83.61 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10636" />
+               id="path10636"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 467.51,83.59 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10638" />
+               id="path10638"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 471.39,81.71 c 0,1.07 0.88,1.95 1.95,1.95 1.08,0 1.96,-0.88 1.96,-1.95 0,-1.08 -0.88,-1.96 -1.96,-1.96 -1.07,0 -1.95,0.88 -1.95,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10640" />
+               id="path10640"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 475.26,80.42 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10642" />
+               id="path10642"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 479.13,80.1 c 0,1.07 0.88,1.95 1.96,1.95 1.07,0 1.95,-0.88 1.95,-1.95 0,-1.08 -0.88,-1.96 -1.95,-1.96 -1.08,0 -1.96,0.88 -1.96,1.96"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10644" />
+               id="path10644"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 483.01,80.11 c 0,1.08 0.88,1.96 1.95,1.96 1.08,0 1.96,-0.88 1.96,-1.96 0,-1.07 -0.88,-1.95 -1.96,-1.95 -1.07,0 -1.95,0.88 -1.95,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10646" />
+               id="path10646"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 486.88,81.35 c 0,1.08 0.88,1.96 1.96,1.96 1.07,0 1.95,-0.88 1.95,-1.96 0,-1.07 -0.88,-1.95 -1.95,-1.95 -1.08,0 -1.96,0.88 -1.96,1.95"
                style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10648" />
+               id="path10648"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 295.16,42.15 2.45,-0.22 2.45,-0.09 2.46,0.01 2.45,0.05 2.45,0.06 2.45,0.02 2.45,0.04 2.45,0.06 2.45,0.03 2.46,0.04 2.45,0.02 2.45,0.08 2.45,0.06 2.45,0.03 2.45,0.01 h 2.46 l 2.45,0.08 2.45,0.06 2.45,0.09 2.45,0.12 2.45,0.19 2.46,0.27 2.45,0.29 2.45,0.37 2.45,0.41 2.45,0.27 2.45,0.2 2.46,0.29 2.45,0.37 2.45,0.42 2.45,0.49 2.45,0.57 2.45,0.76 2.45,0.95 2.46,1.12 2.45,1.24 2.45,1.4 2.45,1.38 2.45,1.49 2.45,1.36 2.46,1.26 2.45,1.25 2.45,1.12 2.45,0.95 2.45,0.95 2.45,0.94 2.46,0.77 2.45,0.77 2.45,0.93 2.45,0.91 2.45,1.17 2.45,1.45 2.46,1.65 2.45,1.71 2.45,2.05 2.45,1.68 2.45,1.66 2.45,1.53 2.45,1.08 2.46,0.76 2.45,0.59 2.45,0.37 2.45,0.38 2.45,0.43 2.45,0.41 2.46,0.36 2.45,0.36 2.45,0.2 2.45,-0.01 2.45,-0.22 2.45,-0.58 2.46,-0.63 2.45,-0.51 2.45,-0.57 2.45,-0.34 2.45,-0.24 2.45,-0.06 2.46,0.21 2.45,0.5 V 79.9 l -2.45,0.02 -2.46,0.05 -2.45,0.12 -2.45,0.19 -2.45,0.28 -2.45,0.55 -2.45,0.54 -2.46,0.68 -2.45,0.51 -2.45,0.22 -2.45,-0.02 -2.45,-0.13 -2.45,-0.34 -2.46,-0.44 -2.45,-0.39 -2.45,-0.45 -2.45,-0.31 -2.45,-0.38 -2.45,-0.65 -2.46,-0.74 -2.45,-1.08 -2.45,-1.46 -2.45,-1.71 -2.45,-1.71 -2.45,-2.06 -2.45,-1.67 -2.46,-1.61 -2.45,-1.52 -2.45,-1.16 -2.45,-0.93 -2.45,-0.87 -2.45,-0.75 -2.46,-0.85 -2.45,-0.9 -2.45,-0.91 -2.45,-1.02 -2.45,-1.1 -2.45,-1.2 -2.46,-1.32 -2.45,-1.37 -2.45,-1.5 -2.45,-1.33 -2.45,-1.37 -2.45,-1.32 -2.46,-1.1 -2.45,-0.97 -2.45,-0.69 -2.45,-0.58 -2.45,-0.55 -2.45,-0.4 -2.45,-0.38 -2.46,-0.22 -2.45,-0.24 -2.45,-0.3 -2.45,-0.34 -2.45,-0.4 -2.45,-0.34 -2.46,-0.2 -2.45,-0.2 -2.45,-0.18 -2.45,-0.07 -2.45,-0.07 h -2.45 l -2.46,-0.04 -2.45,-0.06 -2.45,-0.02 -2.45,-0.04 -2.45,-0.02 -2.45,-0.09 -2.46,-0.05 -2.45,-0.05 -2.45,-0.01 -2.45,-0.02 -2.45,-0.04 -2.45,-0.01 -2.45,-0.01 -2.46,-0.06 -2.45,-0.16 -2.45,-0.3 z"
                style="fill:#999999;fill-opacity:0.4;fill-rule:nonzero;stroke:none"
-               id="path10650" />
+               id="path10650"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
             <path
                d="m 295.16,41.22 2.45,0.03 2.45,0.04 2.46,0.03 2.45,0.04 2.45,0.03 2.45,0.03 2.45,0.03 2.45,0.03 2.45,0.05 2.46,0.04 2.45,0.05 2.45,0.06 2.45,0.04 2.45,0.03 2.45,0.03 2.46,0.03 2.45,0.03 2.45,0.07 2.45,0.08 2.45,0.15 2.45,0.19 2.46,0.24 2.45,0.31 2.45,0.39 2.45,0.38 2.45,0.28 2.45,0.22 2.46,0.26 2.45,0.37 2.45,0.41 2.45,0.52 2.45,0.57 2.45,0.73 2.45,0.96 2.46,1.11 2.45,1.28 2.45,1.39 2.45,1.35 2.45,1.49 2.45,1.37 2.46,1.29 2.45,1.22 2.45,1.11 2.45,0.99 2.45,0.93 2.45,0.92 2.46,0.81 2.45,0.76 2.45,0.9 2.45,0.92 2.45,1.17 2.45,1.48 2.46,1.63 2.45,1.69 2.45,2.06 2.45,1.69 2.45,1.69 2.45,1.49 2.45,1.08 2.46,0.75 2.45,0.62 2.45,0.38 2.45,0.34 2.45,0.44 2.45,0.4 2.46,0.4 2.45,0.35 2.45,0.17 h 2.45 l 2.45,-0.22 2.45,-0.54 2.46,-0.66 2.45,-0.53 2.45,-0.56 2.45,-0.3 2.45,-0.22 2.45,-0.09 2.46,0.08 2.45,0.24"
                style="fill:none;stroke:#3366ff;stroke-width:2.13;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-               id="path10652" />
+               id="path10652"
+               inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+               inkscape:export-xdpi="300"
+               inkscape:export-ydpi="300" />
           </g>
         </g>
         <g
@@ -8158,14 +8232,20 @@
         <g
            id="g10674" />
         <g
-           id="g10676">
+           id="g10676"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,31.91 V 162.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10678" />
         </g>
         <g
-           id="g10680">
+           id="g10680"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,270.54,34.62)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -8202,7 +8282,10 @@
         <g
            id="g10698" />
         <g
-           id="g10700">
+           id="g10700"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 282.74,37.85 h 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -8237,14 +8320,20 @@
         <g
            id="g10724" />
         <g
-           id="g10726">
+           id="g10726"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="M 285.48,31.91 H 498.52"
              style="fill:none;stroke:#000000;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path10728" />
         </g>
         <g
-           id="g10730">
+           id="g10730"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <path
              d="m 295.16,29.17 v 2.74"
              style="fill:none;stroke:#333333;stroke-width:1.07;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
@@ -8269,7 +8358,10 @@
         <g
            id="g10742" />
         <g
-           id="g10744">
+           id="g10744"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(1,0,0,-1,286.28,20.52)"
              style="font-variant:normal;font-weight:normal;font-size:9px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -8328,20 +8420,12 @@
         <g
            id="g10780" />
         <g
-           id="g10782">
-          <text
-             transform="matrix(1,0,0,-1,377.8,7.9)"
-             style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text10786"><tspan
-               x="0 5.5 11 17.115999 22.902"
-               y="0"
-               sodipodi:role="line"
-               id="tspan10784">cyday</tspan></text>
-        </g>
-        <g
            id="g10788" />
         <g
-           id="g10790">
+           id="g10790"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300">
           <text
              transform="matrix(0,1,1,0,265.38,46.39)"
              style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -8395,6 +8479,122 @@
            id="g10836" />
         <g
            id="g10838" />
+        <text
+           transform="scale(1,-1)"
+           style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text10557-1-3"
+           x="369.06198"
+           y="-8.6235056"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan10555-2-6"
+             x="369.06198"
+             y="-8.6235056">Julian day</tspan></text>
+        <g
+           id="g68772-7"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"
+           transform="translate(-11.960882,0.20189668)">
+          <g
+             id="g10239-5-5"
+             transform="translate(10.008317,2.9833881)">
+            <text
+               transform="scale(1,-1)"
+               style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="text10243-9-3"
+               x="103.87172"
+               y="-6.6803746"><tspan
+                 sodipodi:role="line"
+                 id="tspan10241-2-5"
+                 x="103.87172"
+                 y="-6.6803746">DOC (mg/L)</tspan></text>
+          </g>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="48.574318"
+           y="-177.53125"
+           id="text20553-5-2-5-6"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-9-03-2"
+             style="stroke-width:0.75"
+             x="48.574318"
+             y="-177.53125">Soil Moisture at 28-100cm (m³/m³)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="300.75708"
+           y="-176.10881"
+           id="text20553-5-5-1-9-8-9"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-6-2-3-4-1"
+             style="stroke-width:0.75"
+             x="300.75708"
+             y="-176.10881">Soil Moisture at 100-255 cm (m³/m³)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="301.18362"
+           y="-346.18652"
+           id="text20553-5-5-3"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-6-20"
+             style="stroke-width:0.75"
+             x="301.18362"
+             y="-346.18652">Soil Temperature at 100-255 cm (°C)</tspan></text>
+        <text
+           transform="scale(1,-1)"
+           style="font-variant:normal;font-weight:normal;font-size:11px;font-family:Helvetica;-inkscape-font-specification:Helvetica;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text4103-5"
+           x="104.43517"
+           y="-346.95261"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             x="104.43517"
+             y="-346.95261"
+             id="tspan4101-5">Volume</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="170.25905"
+           y="-344.9635"
+           id="text17723"
+           transform="scale(1,-1)"><tspan
+             sodipodi:role="line"
+             id="tspan17721"
+             style="stroke-width:0.75"></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:9.99998px;line-height:1.25;font-family:sans-serif;stroke-width:0.75"
+           x="145.18214"
+           y="-347.17407"
+           id="text20553-5-2-5-6-0"
+           transform="scale(1,-1)"
+           inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+           inkscape:export-xdpi="300"
+           inkscape:export-ydpi="300"><tspan
+             sodipodi:role="line"
+             id="tspan20551-3-9-03-2-9"
+             style="stroke-width:0.75"
+             x="145.18214"
+             y="-347.17407">(m³)</tspan></text>
       </g>
     </g>
     <text
@@ -8403,7 +8603,7 @@
        x="-49.969398"
        y="63.760296"
        id="text80861"
-       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig4.png"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
@@ -8417,7 +8617,7 @@
        x="137.23141"
        y="64.87999"
        id="text80861-5"
-       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig4.png"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
@@ -8425,5 +8625,19 @@
          style="font-size:7.05556px;stroke-width:0.264583"
          x="137.23141"
          y="64.87999">b.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="-40.853111"
+       y="106.52366"
+       id="text20553-3"
+       inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan20551-7"
+         style="stroke-width:0.264583"
+         x="-40.853111"
+         y="106.52366">Surface Water Temperature (°C)</tspan></text>
   </g>
 </svg>

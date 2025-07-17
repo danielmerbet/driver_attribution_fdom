@@ -1,7 +1,7 @@
 library(lubridate)
 
 set.seed(123)
-case_study <- "feeagh" #sau or  feeagh
+case_study <- "sau" #sau or  feeagh
 dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
@@ -9,7 +9,10 @@ data$date <- as.Date(data$date)
 
 #merge all and add julian day and random
 data$cyday <- cos(yday(data$date)*pi/180)
-data$random <- runif(nrow(data))
+#data$random <- runif(nrow(data))
+
+#data validation
+
 
 nse <- function(sim, obs) {
   numerator <- sum((obs - sim)^2)

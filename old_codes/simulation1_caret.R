@@ -11,14 +11,6 @@ data$date <- as.Date(data$date)
 data$cyday <- cos(yday(data$date)*pi/180)
 data$random <- runif(nrow(data))
 
-#selected parameters
-if (case_study=="sau"){
-  data <- data[,c("v", "st255","sm100", "sm255","doc_gwlf", "cyday", "fdom", "date")]
-} 
-if (case_study=="feeagh"){
-  data <- data[,c("swt", "sr","st100","st255","sm100", "sm255","doc_gwlf", "cyday", "fdom", "date")]
-} 
-
 nse <- function(sim, obs) {
   numerator <- sum((obs - sim)^2)
   denominator <- sum((obs - mean(obs))^2)
@@ -26,33 +18,25 @@ nse <- function(sim, obs) {
   return(nse)
 }
 
-kge <- function(sim, obs) {
-  r <- cor(sim, obs, use = "pairwise.complete.obs")
-  alpha <- sd(sim, na.rm = TRUE) / sd(obs, na.rm = TRUE)
-  beta <- mean(sim, na.rm = TRUE) / mean(obs, na.rm = TRUE)
-  
-  kge <- 1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
-  return(kge)
-}
-
 #ML Analysis
 ###############################################################
 #Random forest
 library(randomForest)
 if (case_study=="sau"){
+  i <- 433 #best fitting 
   yi<-0;ye<-60
 }
 if (case_study=="feeagh"){
+  i <- 101 #best fitting 
   yi<-40;ye<-90
 }
-# Define fixed holdout (e.g., last 15%)
-n <- nrow(data)
-holdout_ratio <- 0.15
-n_holdout <- round(n * holdout_ratio)
-
-# Training: first 85%, Testing: last 15%
-traindata <- data[1:(n - n_holdout), ]
-testdata <- data[(n - n_holdout + 1):n, ]
+train_perc <- 0.85 #percentage for training 
+training_number <- round(dim(data)[1]*train_perc)
+total_front <- dim(data)[1]-training_number
+number_test <- dim(data)[1]-total_front
+m <- (1+i):(1+i+total_front)
+traindata <- data[-m,]
+testdata <- data[m,]
 
 #start training 
 tvar <- "fdom"
@@ -81,21 +65,7 @@ importance_random <- importance(RFfit); importance_random
 importance_perc <- importance_random/sum(importance_random)*100
 importance_perc
 
-##############33
-#LSTM
-# Get RF predictions on both training and testing data
-predRF_train <- predict(RFfit, traindata)
-predRF_test <- predict(RFfit, testdata) # You already have this as 'predRF'
-
-# Calculate the residuals (the part the RF model couldn't explain)
-residuals_train <- traindata$fdom - predRF_train
-residuals_test <- testdata$fdom - predRF_test
-
-
-
-
-
-pdf(paste0(dir, "output/simulation2.pdf"), width = 8, height = 6)
+pdf(paste0(dir, "output/simulation1.pdf"), width = 8, height = 6)
 par(font.lab = 2) # Makes axis labels bold
 plot(data$date, data[tvar][,1], ylab="fDOM (QSU)", 
      xlab = "", xaxt="n", bty="n", ylim=c(yi,ye))
@@ -104,10 +74,72 @@ axis.Date(1, at = seq(as.Date(paste0(year(min(data$date)),"-", "01-01")),
                       by = "6 months"), format = "%m-%Y")
 points(traindata$date, predRF_OOB, col="steelblue", pch = 19, cex=0.5)
 points(testdata$date, predRF, col="brown", pch = 19, cex=0.5)
-#title(main="Optimal training period with best predictors")
+#title(main="Optimal training period")
 text(x = min(traindata$date), y = max(data[tvar][,1]-10),
-     labels = paste0("R² = ", rsq_test, "\nNSE = ", nse_test, "\nRMSE = ", rmse_test), pos = 4, col = "black")
+     labels = paste0("R² = ", rsq_test, "\nNSE = ", nse_test, "\nRMSE = ", rmse_test), 
+     pos = 4, col = "black")
 dev.off()
 
 plot(testdata[tvar][,1],predRF, xlab="Obs", ylab="Sim", ylim=c(5,52),xlim=c(5,52))
 abline(0,1, col="red")
+
+####Plotting nude purity in bars
+name_variable = names(data)[!names(data) %in% c("fdom", "date")]
+
+#png(paste0(dir, "output/NudePurityBars.png"), width = 800, height = 600, bg = NA)
+# Adjust plot margins to make space for longer variable names
+#par(mar = c(5, 15, 4, 2))  # Increase the left margin (second value)
+
+# Create the bar plot with better spacing for variable names
+barplot(
+  height = rev(importance_perc),
+  names.arg = rev(name_variable),
+  horiz = TRUE,
+  col = "steelblue",
+  las = 1,  # Rotate labels for better readability
+  cex.names = 1,  # Reduce font size of variable names
+  main = "Sau Reservoir",
+  xlab = "Nude purity (%)",
+  ylab = "Predictor"
+)
+#dev.off()
+
+barplot_table <- data.frame(name_variable=name_variable, 
+                            importance_perc=importance_perc)
+
+write.csv(barplot_table, paste0(dir, "output/barplot_table.csv"), quote = F, row.names = F)
+
+
+library(caret)
+
+set.seed(123)
+ctrl <- trainControl(method = "cv", number = 5)  # 5-fold cross-validation
+tuneGrid <- expand.grid(
+  mtry = c(2, 4, 6, 8),      # Number of variables randomly sampled at each split
+  ntree = c(500, 1000),      # Add this manually since 'ntree' isn't in tuneGrid
+  maxnodes = c(20, 40, 60)   # Limiting depth via max nodes
+)
+
+best_model <- NULL
+best_rmse <- Inf
+
+for (nt in tuneGrid$ntree) {
+  for (mn in tuneGrid$maxnodes) {
+    set.seed(123)
+    rf_model <- train(
+      formula,
+      data = traindata,
+      method = "rf",
+      metric = "RMSE",
+      tuneGrid = expand.grid(mtry = tuneGrid$mtry),
+      trControl = ctrl,
+      ntree = nt,
+      maxnodes = mn
+    )
+    if (min(rf_model$results$RMSE) < best_rmse) {
+      best_rmse <- min(rf_model$results$RMSE)
+      best_model <- rf_model
+    }
+  }
+}
+print(best_model)

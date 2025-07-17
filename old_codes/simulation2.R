@@ -1,7 +1,7 @@
 library(lubridate)
 
 set.seed(123)
-case_study <- "sau" #sau or  feeagh
+case_study <- "feeagh" #sau or  feeagh
 dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
@@ -26,33 +26,25 @@ nse <- function(sim, obs) {
   return(nse)
 }
 
-kge <- function(sim, obs) {
-  r <- cor(sim, obs, use = "pairwise.complete.obs")
-  alpha <- sd(sim, na.rm = TRUE) / sd(obs, na.rm = TRUE)
-  beta <- mean(sim, na.rm = TRUE) / mean(obs, na.rm = TRUE)
-  
-  kge <- 1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
-  return(kge)
-}
-
 #ML Analysis
 ###############################################################
 #Random forest
 library(randomForest)
 if (case_study=="sau"){
+  i <- 433 #best fitting 
   yi<-0;ye<-60
 }
 if (case_study=="feeagh"){
+  i <- 101 #best fitting 
   yi<-40;ye<-90
 }
-# Define fixed holdout (e.g., last 15%)
-n <- nrow(data)
-holdout_ratio <- 0.15
-n_holdout <- round(n * holdout_ratio)
-
-# Training: first 85%, Testing: last 15%
-traindata <- data[1:(n - n_holdout), ]
-testdata <- data[(n - n_holdout + 1):n, ]
+train_perc <- 0.85 #percentage for training 
+training_number <- round(dim(data)[1]*train_perc)
+total_front <- dim(data)[1]-training_number
+number_test <- dim(data)[1]-total_front
+m <- (1+i):(1+i+total_front)
+traindata <- data[-m,]
+testdata <- data[m,]
 
 #start training 
 tvar <- "fdom"
@@ -80,20 +72,6 @@ nse_test <- round(nse(testdata[tvar][,1], predRF),2); nse_test
 importance_random <- importance(RFfit); importance_random
 importance_perc <- importance_random/sum(importance_random)*100
 importance_perc
-
-##############33
-#LSTM
-# Get RF predictions on both training and testing data
-predRF_train <- predict(RFfit, traindata)
-predRF_test <- predict(RFfit, testdata) # You already have this as 'predRF'
-
-# Calculate the residuals (the part the RF model couldn't explain)
-residuals_train <- traindata$fdom - predRF_train
-residuals_test <- testdata$fdom - predRF_test
-
-
-
-
 
 pdf(paste0(dir, "output/simulation2.pdf"), width = 8, height = 6)
 par(font.lab = 2) # Makes axis labels bold
