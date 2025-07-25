@@ -3,7 +3,7 @@ library(gridExtra) # for arranging multiple plots
 library(ggplot2)
 
 set.seed(123)
-case_study <- "sau" #or sau
+case_study <- "feeagh" #or sau
 dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
@@ -11,7 +11,7 @@ data$date <- as.Date(data$date)
 
 #merge all and add julian day and random
 data$cyday <- cos(yday(data$date)*pi/180)
-#data$random <- runif(nrow(data))
+data$random <- runif(nrow(data))
 
 #select best parameters
 #data <- data[,c("v", "st255","sm100", "sm255","doc_gwlf", "cyday", "fdom", "date")]
@@ -23,35 +23,23 @@ nse <- function(sim, obs) {
   return(nse)
 }
 
-kge <- function(sim, obs) {
-  r <- cor(sim, obs, use = "pairwise.complete.obs")
-  alpha <- sd(sim, na.rm = TRUE) / sd(obs, na.rm = TRUE)
-  beta <- mean(sim, na.rm = TRUE) / mean(obs, na.rm = TRUE)
-  
-  kge <- 1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
-  return(kge)
-}
-
 #ML Analysis
 ###############################################################
 #Random forest
 library(randomForest)
-
 if (case_study=="sau"){
-  yi<-0;ye<-60
+  i <- 433 #best fitting 
 }
 if (case_study=="feeagh"){
-  yi<-40;ye<-90
+  i <- 101 #best fitting 
 }
-
-# Define fixed holdout (e.g., last 15%)
-n <- nrow(data)
-holdout_ratio <- 0.15
-n_holdout <- round(n * holdout_ratio)
-
-# Training: first 85%, Testing: last 15%
-traindata <- data[1:(n - n_holdout), ]
-testdata <- data[(n - n_holdout + 1):n, ]
+train_perc <- 0.85 #percentage for training 
+training_number <- round(dim(data)[1]*train_perc)
+total_front <- dim(data)[1]-training_number
+number_test <- dim(data)[1]-total_front
+m <- (1+i):(1+i+total_front)
+traindata <- data[-m,]
+testdata <- data[m,]
 
 #start training 
 set.seed(123)
@@ -61,13 +49,24 @@ RFfit <- randomForest(formula, data = traindata, ntree = 1000)
 #plot(RFfit)
 
 #Partial dependence plots
+#partial(RFfit, pred.var = var, plot = T, plot.engine = "ggplot2", rug=T)
+var <- "st255"
+partial(RFfit, pred.var = var)
+var <- "sm100"
+partial(RFfit, pred.var = var)
+var <- "sm255"
+partial(RFfit, pred.var = var)
+var <- "doc_gwlf"
+partial(RFfit, pred.var = var)
+var <- "cyday"
+partial(RFfit, pred.var = var)
 
 #ggplot nice
 #Partial dependence plots
 # Define the variables
 if (case_study=="sau"){
   vars <- c("v", "st255", "sm100", "sm255", "doc_gwlf", "cyday")
-  yi<-10; ye<-25
+  yi<-12; ye<-16
 }
 
 if (case_study=="feeagh"){
@@ -101,3 +100,5 @@ if (case_study=="feeagh"){
   grid.arrange(grobs = plots, ncol = 2, nrow = 4)
 }
 dev.off()
+
+

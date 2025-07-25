@@ -91,9 +91,87 @@ predRF_test <- predict(RFfit, testdata) # You already have this as 'predRF'
 residuals_train <- traindata$fdom - predRF_train
 residuals_test <- testdata$fdom - predRF_test
 
+##arrange data for LSTM
+library(keras)
+# Hyperparameter: Define the look-back window for the LSTM
+look_back <- 10 # Use the last 10 residuals to predict the next one
+
+# --- Data Normalization ---
+# Create a simple min-max scaler function
+scaler <- function(x) {
+  return ((x - min(x)) / (max(x) - min(x)))
+}
+
+unscaler <- function(x, min_val, max_val) {
+  return (x * (max_val - min_val) + min_val)
+}
+
+# IMPORTANT: Fit the scaler ONLY on the training data's residuals
+min_resid_train <- min(residuals_train)
+max_resid_train <- max(residuals_train)
+
+scaled_residuals_train <- scaler(residuals_train)
+# Apply the SAME scaling to the test data
+scaled_residuals_test <- (residuals_test - min_resid_train) / (max_resid_train - min_resid_train)
 
 
+# --- Create sequences for the LSTM ---
+# Function to restructure data into [samples, timesteps, features]
+create_sequences <- function(data, look_back) {
+  x <- list()
+  y <- list()
+  for (i in 1:(length(data) - look_back)) {
+    x[[i]] <- data[i:(i + look_back - 1)]
+    y[[i]] <- data[i + look_back]
+  }
+  return(list(x = array(unlist(x), dim = c(length(x), look_back, 1)), y = unlist(y)))
+}
 
+# Create training and testing sequences
+train_sequences <- create_sequences(scaled_residuals_train, look_back)
+test_sequences <- create_sequences(scaled_residuals_test, look_back)
+
+X_train_lstm <- train_sequences$x
+y_train_lstm <- train_sequences$y
+
+X_test_lstm <- test_sequences$x
+y_test_lstm <- test_sequences$y
+
+y_train_lstm <- as.matrix(y_train_lstm)
+
+#Implement LSTM
+# Clear any previous Keras session
+# Clear any previous Keras session
+k_clear_session()
+set.seed(123) # For reproducibility of LSTM training
+
+# Define the LSTM model architecture using a list (more robust syntax)
+lstm_model <- keras_model_sequential(list(
+  layer_lstm(units = 50, input_shape = c(look_back, 1), return_sequences = TRUE),
+  layer_dropout(rate = 0.2),
+  layer_lstm(units = 50),
+  layer_dropout(rate = 0.2),
+  layer_dense(units = 1)
+))
+
+# Compile the model
+lstm_model$compile(
+  loss = 'mean_squared_error',
+  optimizer = 'adam'
+)
+
+summary(lstm_model)
+
+# Train the model
+history <- lstm_model$fit(
+  X_train_lstm, y_train_lstm,
+  epochs = 50,
+  batch_size = 32,
+  validation_split = 0.1,
+  verbose = 2
+)
+
+plot(history)
 
 pdf(paste0(dir, "output/simulation2.pdf"), width = 8, height = 6)
 par(font.lab = 2) # Makes axis labels bold
