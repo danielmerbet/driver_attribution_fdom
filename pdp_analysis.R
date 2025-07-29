@@ -3,7 +3,7 @@ library(gridExtra) # for arranging multiple plots
 library(ggplot2)
 
 set.seed(123)
-case_study <- "sau" #or sau
+case_study <- "feeagh" #feeaghor sau
 dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
@@ -16,21 +16,30 @@ data$cyday <- cos(yday(data$date)*pi/180)
 #select best parameters
 #data <- data[,c("v", "st255","sm100", "sm255","doc_gwlf", "cyday", "fdom", "date")]
 
-nse <- function(sim, obs) {
-  numerator <- sum((obs - sim)^2)
-  denominator <- sum((obs - mean(obs))^2)
-  nse <- 1 - (numerator / denominator)
-  return(nse)
+r2 <- function(obs, pred) {
+  cor(obs, pred)^2
 }
 
-kge <- function(sim, obs) {
-  r <- cor(sim, obs, use = "pairwise.complete.obs")
-  alpha <- sd(sim, na.rm = TRUE) / sd(obs, na.rm = TRUE)
-  beta <- mean(sim, na.rm = TRUE) / mean(obs, na.rm = TRUE)
-  
-  kge <- 1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
-  return(kge)
+# RMSE
+rmse <- function(obs, pred) {
+  sqrt(mean((obs - pred)^2))
 }
+
+# NSE
+nse <- function(obs, pred) {
+  numerator <- sum((obs - pred)^2)
+  denominator <- sum((obs - mean(obs))^2)
+  1 - (numerator / denominator)
+}
+
+# KGE
+kge <- function(obs, pred) {
+  r <- cor(pred, obs, use = "pairwise.complete.obs")
+  alpha <- sd(pred, na.rm = TRUE) / sd(obs, na.rm = TRUE)
+  beta <- mean(pred, na.rm = TRUE) / mean(obs, na.rm = TRUE)
+  1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
+}
+
 
 #ML Analysis
 ###############################################################
@@ -57,7 +66,13 @@ testdata <- data[(n - n_holdout + 1):n, ]
 set.seed(123)
 tvar <- "fdom"
 formula <- as.formula(paste(tvar, "~ . - date"))
-RFfit <- randomForest(formula, data = traindata, ntree = 1000)
+if (case_study=="sau"){
+  RFfit <- randomForest(formula, data = traindata, ntree = 300, mtry=2)
+}
+if (case_study=="feeagh"){
+  RFfit <- randomForest(formula, data = traindata, ntree = 300, mtry=6)
+}
+
 #plot(RFfit)
 
 #Partial dependence plots
@@ -66,13 +81,13 @@ RFfit <- randomForest(formula, data = traindata, ntree = 1000)
 #Partial dependence plots
 # Define the variables
 if (case_study=="sau"){
-  vars <- c("v", "st255", "sm100", "sm255", "doc_gwlf", "cyday")
-  yi<-10; ye<-25
+  vars <- c("v", "st255", "sm100", "sm255", "cyday") #"doc_gwlf"
+  yi<-10; ye<-18
 }
 
 if (case_study=="feeagh"){
   vars <- c("swt", "sr", "st100","st255", "sm100", "sm255", "doc_gwlf", "cyday")
-  yi<-58; ye<-64
+  yi<-57; ye<-63
 }
 
 # Generate the plots

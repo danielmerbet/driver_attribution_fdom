@@ -18,7 +18,7 @@ blend_rmse <- function(weights) {
   if (case_study=="sau"){
     blended <- w1 * pred_lm + w2 * pred_rf + w3 * pred_ctb
   }else{
-    blended <- w1 * pred_lm + w2 * pred_ctb + w3 * pred_lgb
+    blended <- w1 * pred_lm + w2 * pred_rf + w3 * pred_ctb
   }
   
   
@@ -45,13 +45,15 @@ w1 <- opt$par[1]
 w2 <- opt$par[2]
 w3 <- 1 - w1 - w2
 cat("Optimal weights:\n")
-cat("Linear:   ", round(w1, 3), "\n")
+
 if (case_study=="sau"){
+  cat("Linear:   ", round(w1, 3), "\n")
   cat("RF:       ", round(w2, 3), "\n")
   cat("CatBoost: ", round(w3, 3), "\n")
 }else{
-  cat("Catboost:       ", round(w2, 3), "\n")
-  cat("LGB: ", round(w3, 3), "\n")
+  cat("Linear:       ", round(w1, 3), "\n")
+  cat("RF:       ", round(w2, 3), "\n")
+  cat("CatBoost: ", round(w3, 3), "\n")
 }
 
 
@@ -59,7 +61,7 @@ if (case_study=="sau"){
 if (case_study=="sau"){
   blended_preds <- w1 * pred_lm + w2 * pred_rf + w3 * pred_ctb
 }else{
-  blended_preds <- w1 * pred_lm + w2 * pred_ctb + w3 * pred_lgb
+  blended_preds <- w1 * pred_lm + w2 * pred_rf + w3 * pred_ctb
 }
 
 evaluate("Blended1", blended_preds)
@@ -75,7 +77,7 @@ evaluate("Blended1", blended_preds)
 
 #Let's use all of the models:
 # Your 7-model prediction matrix
-pred_matrix <- cbind(pred_rf, pred_xgb, pred_lgb, pred_ctb, pred_lm, pred_knn, pred_svr)
+pred_matrix <- cbind(pred_rf, pred_xgb, pred_lgb, pred_ctb) #, pred_lm, pred_knn, pred_svr
 
 # Objective function: minimize RMSE
 blend_rmse_de <- function(weights) {
@@ -101,7 +103,7 @@ opt_result <- DEoptim(
 
 opt_weights <- opt_result$optim$bestmem
 opt_weights <- opt_weights / sum(opt_weights)
-names(opt_weights) <- c("RF", "XGB", "LGB", "CatBoost", "Linear", "KNN", "SVR")
+names(opt_weights) <- c("RF", "XGB", "LGB", "CatBoost") #, "Linear""KNN", "SVR"
 print(round(opt_weights, 3))
 
 # Final blended prediction

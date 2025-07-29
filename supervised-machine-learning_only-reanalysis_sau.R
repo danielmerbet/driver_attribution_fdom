@@ -14,12 +14,7 @@ data$date <- as.Date(data$date)
 data$cyday <- cos(yday(data$date) * pi / 180)
 
 # Select columns
-if (case_study == "sau") {
-  data <- data[, c("st255", "sm100", "sm255", "cyday", "fdom", "date")]
-}
-if (case_study == "feeagh") {
-  data <- data[, c("sr", "st100", "st255", "sm100", "sm255", "cyday", "fdom", "date")]
-}
+data <- data[, c("st255", "sm100", "sm255", "cyday", "fdom", "date")] # "v", "doc_gwlf",
 
 # Train/test split (last 15%)
 n <- nrow(data)
@@ -195,17 +190,10 @@ results_df <- do.call(rbind.data.frame, results)
 print(results_df)
 
 #now, you should go to optmised_blending.R, in case you want to re-run de optimisation
-if (case_study=="sau"){
-  w1 <- 0.552 #linear
-  w2 <- 0.448 #catboost
-  blended<- w1 * pred_lm + w2 * pred_ctb
-  blended_training <- w1 * preds_training$LM + w2 * preds_training$RF 
-}else{
-  w1 <- 0.503 #linear 
-  w2 <- 0.497 #rf
-}
-
-
+w1 <- 0.586 #linear
+w2 <- 0.414 #catboost
+blended<- w1 * pred_lm + w2 * pred_ctb
+blended_training <- w1 * preds_training$LM + w2 * preds_training$CTB
 
 evaluate("Blended", blended)
 
@@ -216,6 +204,42 @@ print(results_df)
 write.csv(results_df, file=paste0(dir,"output/metrics_models_testing_only-reanalysis.csv"),
           quote = F, row.names = F)
 
+#save for training:
+results <- list()
+
+evaluate <- function(name, pred, obs = y_train) {
+  results <<- append(results, list(list(
+    Model = name,
+    R2 = r2(obs, pred),
+    RMSE = rmse(obs, pred),
+    NSE = nse(obs, pred),
+    KGE = kge(obs, pred)
+  )))
+}
+
+evaluate("RF", preds_training$RF)
+evaluate("XGB", preds_training$XGB)
+evaluate("LGB", preds_training$LGB)
+evaluate("CatBoost", preds_training$CTB)
+evaluate("Linear", preds_training$LM)
+evaluate("KNN", preds_training$KNN)
+evaluate("SVR", preds_training$SVR)
+
+#now, you should go to optmised_blending.R, in case you want to re-run de optimisation
+w1 <- 0.586 #linear
+w2 <- 0.414 #catboost
+blended<- w1 * pred_lm + w2 * pred_ctb
+blended_training <- w1 * preds_training$LM + w2 * preds_training$CTB
+
+
+evaluate("Blended", blended_training)
+
+results_df <- do.call(rbind.data.frame, results)
+results_df <-data.frame(Model=results_df$Model, round(results_df[,2:5],2))
+print(results_df)
+
+write.csv(results_df, file=paste0(dir,"output/metrics_models_training_only-reanalysis.csv"),
+          quote = F, row.names = F)
 
 #PLOT ALL MODELS
 
@@ -275,27 +299,26 @@ test_predictions_list = test_predictions_list
 train_metrics_list = train_metrics_list
 test_metrics_list = test_metrics_list
 
-#title = "Supervised Machine Learning Approaches (Train + Test)",
 title = ""
-filename = paste0(dir, "output/model_comparison_train_test_selected_only-reanalysis.pdf")
 
 # Combine predictions into a data frame
-all_train <- lapply(names(train_predictions_list), function(model_name) {
+model_name_toplot <- "CatBoost"
+all_train <- lapply(names(train_predictions_list), function(model_name_toplot) {
   data.frame(
     Date = dates_train,
-    Value = train_predictions_list[[model_name]],
-    Model = model_name,
+    Value = train_predictions_list[[model_name_toplot]],
+    Model = model_name_toplot,
     Period = "Train"
   )
 })
 df_train_pred <- do.call(rbind, all_train)
 df_train_actual <- data.frame(Date = dates_train, Value = y_train_actual, Model = "Actual", Period = "Train")
 
-all_test <- lapply(names(test_predictions_list), function(model_name) {
+all_test <- lapply(names(test_predictions_list), function(model_name_toplot) {
   data.frame(
     Date = dates_test,
-    Value = test_predictions_list[[model_name]],
-    Model = model_name,
+    Value = test_predictions_list[[model_name_toplot]],
+    Model = model_name_toplot,
     Period = "Test"
   )
 })
@@ -326,11 +349,12 @@ metric_text <- unlist(lapply(names(test_metrics_list), function(model_name) {
   test_metrics <- test_metrics_list[[model_name]]
   paste0(model_name, ":  \nR2=", sprintf("%.2f", train_metrics$R2),
          " \nKGE=", sprintf("%.2f", train_metrics$KGE),
-         " \nRMSE=", sprintf("%.2f", train_metrics$RMSE),
-         " \nNSE=", sprintf("%.2f", train_metrics$NSE))
+         " \nRMSE=", sprintf("%.2f", train_metrics$RMSE)
+         #" \nNSE=", sprintf("%.2f", train_metrics$NSE)
+  )
 }))
 #metric_text <-c("Training: ", metric_text)
-metric_text<-c("Training: ", metric_text[length(metric_text)])
+metric_text<-c("Training: ", metric_text[grepl(model_name_toplot, metric_text)])
 
 #test
 metric_text_test <- unlist(lapply(names(test_metrics_list), function(model_name) {
@@ -338,11 +362,12 @@ metric_text_test <- unlist(lapply(names(test_metrics_list), function(model_name)
   test_metrics <- test_metrics_list[[model_name]]
   paste0(model_name, ": \nR2=", sprintf("%.2f", test_metrics$R2),
          " \nKGE=", sprintf("%.2f", test_metrics$KGE),
-         " \nRMSE=", sprintf("%.2f", test_metrics$RMSE),
-         " \nNSE=", sprintf("%.2f", test_metrics$NSE))
+         " \nRMSE=", sprintf("%.2f", test_metrics$RMSE)
+         #" \nNSE=", sprintf("%.2f", test_metrics$NSE)
+  )
 }))
 #metric_text_test <-c("Testing: ", metric_text_test)
-metric_text_test <-c("Testing: ", metric_text_test[length(metric_text_test)])
+metric_text_test <-c("Testing: ", metric_text_test[grepl(model_name_toplot,metric_text_test)])
 
 metric_text_str <- paste(metric_text, collapse = "\n")
 metric_text_str_test <- paste(metric_text_test, collapse = "\n")
@@ -350,14 +375,9 @@ metric_text_str_test <- paste(metric_text_test, collapse = "\n")
 # Plot
 #p <- ggplot(df_plot, aes(x = Date, y = Value, color = Model, linetype = Period)) +
 #p <- ggplot(df_plot, aes(x = Date, y = Value, color = Model)) +
-if (case_study=="sau"){
-  yi<-0;ye<-60
-}
-if (case_study=="feeagh"){
-  yi<-40;ye<-90
-}
+yi<-0;ye<-60
 
-pdf(paste0(dir, "output/simulation1.pdf"), width = 8, height = 6)
+pdf(paste0(dir, "output/simulation2_",model_name_toplot,".pdf"), width = 8, height = 6)
 plot(obs_df_plot$Date, obs_df_plot$Value, ylab="fDOM (QSU)", 
      xlab = "", xaxt="n", bty="n", ylim=c(yi,ye))
 axis.Date(1, at = seq(as.Date(paste0(year(min(obs_df_plot$Date)),"-", "01-01")), 
@@ -377,11 +397,12 @@ axis.Date(1, at = seq(as.Date(paste0(year(min(obs_df_plot$Date)),"-", "01-01")),
 #points(df_test_pred$Date[df_test_pred$Model=="LGB"], 
 #       df_test_pred$Value[df_test_pred$Model=="LGB"], col="brown", pch = 19, cex=0.5)
 
-#points(df_train_pred$Date[df_train_pred$Model=="CatBoost"], 
-#       df_train_pred$Value[df_train_pred$Model=="CatBoost"], col="steelblue", pch = 19, cex=0.5)
-#points(df_test_pred$Date[df_test_pred$Model=="CatBoost"], 
-#       df_test_pred$Value[df_test_pred$Model=="CatBoost"], col="brown", pch = 19, cex=0.5)
-
+if(model_name_toplot=="CatBoost"){
+points(df_train_pred$Date[df_train_pred$Model=="CatBoost"], 
+       df_train_pred$Value[df_train_pred$Model=="CatBoost"], col="steelblue", pch = 19, cex=0.5)
+points(df_test_pred$Date[df_test_pred$Model=="CatBoost"], 
+       df_test_pred$Value[df_test_pred$Model=="CatBoost"], col="limegreen", pch = 19, cex=0.5)
+}
 #points(df_train_pred$Date[df_train_pred$Model=="Linear"], 
 #       df_train_pred$Value[df_train_pred$Model=="Linear"], col="steelblue", pch = 19, cex=0.5)
 #points(df_test_pred$Date[df_test_pred$Model=="Linear"], 
@@ -397,20 +418,21 @@ axis.Date(1, at = seq(as.Date(paste0(year(min(obs_df_plot$Date)),"-", "01-01")),
 #points(df_test_pred$Date[df_test_pred$Model=="SVR"], 
 #       df_test_pred$Value[df_test_pred$Model=="SVR"], col="brown", pch = 19, cex=0.5)
 
+if(model_name_toplot=="CatBoost"){
 points(df_train_pred$Date[df_train_pred$Model=="Blended"], 
        df_train_pred$Value[df_train_pred$Model=="Blended"], col="steelblue", pch = 19, cex=0.5)
 points(df_test_pred$Date[df_test_pred$Model=="Blended"], 
-       df_test_pred$Value[df_test_pred$Model=="Blended"], col="brown", pch = 19, cex=0.5)
-
+       df_test_pred$Value[df_test_pred$Model=="Blended"], col="limegreen", pch = 19, cex=0.5)
+}
 #points(obs_df_plot$Date, obs_df_plot$Value)
 
-text(x = min(df_train_pred$Date[df_train_pred$Model=="RF"]), 
-     y = max(df_train_pred$Value[df_train_pred$Model=="RF"]-10),
+text(x = min(df_train_pred$Date[df_train_pred$Model=="CatBoost"]), 
+     y = max(df_train_pred$Value[df_train_pred$Model=="CatBoost"]-10),
      labels = metric_text_str, 
      pos = 4, col = "steelblue", cex= 0.8)
 
-text(x = min(df_test_pred$Date[df_test_pred$Model=="RF"]-100), 
-     y = max(df_train_pred$Value[df_train_pred$Model=="RF"]-10),
+text(x = min(df_test_pred$Date[df_test_pred$Model=="CatBoost"]-100), 
+     y = max(df_train_pred$Value[df_train_pred$Model=="CatBoost"]-10),
      labels = metric_text_str_test, 
-     pos = 4, col = "brown", cex= 0.8)
+     pos = 4, col = "limegreen", cex= 0.8)
 dev.off()
