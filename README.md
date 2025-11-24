@@ -6,7 +6,7 @@ This repository contains code and data for analyzing the drivers of FDOM (Fluore
 
 ## Metadata (Dublin Core)
 
-Below is a metadata description for this repository using the **Dublin Core** metadata standard. The Dublin Core Metadata Element Set is a widely adopted, generic schema for describing digital resources. :contentReference[oaicite:0]{index=0}  
+Below is a metadata description for this repository using the **Dublin Core** metadata standard. The [Dublin Core Metadata Element Set](https://www.dublincore.org/specifications/dublin-core/dces/) is a widely adopted, generic schema for describing digital resources.
 
 | Dublin Core Element | Value |
 |---|---|
