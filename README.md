@@ -1,6 +1,6 @@
 # driver_attribution_fdom
 
-This repository contains code and data for analyzing the drivers of FDOM (Fluorescent Dissolved Organic Matter) attribution. It contails all codes and data use in the publication: [**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**](https://doi.org/10.5194/egusphere-2025-4049) 
+This repository contains code and data for analyzing the drivers of FDOM (Fluorescent Dissolved Organic Matter) attribution. It contails all codes and data used in the preprint: [**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**](https://doi.org/10.5194/egusphere-2025-4049) 
 
 ---
 
