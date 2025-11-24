@@ -27,15 +27,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.58123308"
-     inkscape:cx="283.01899"
-     inkscape:cy="900.67137"
+     inkscape:zoom="0.41099385"
+     inkscape:cx="-152.0704"
+     inkscape:cy="633.82943"
      inkscape:window-width="1834"
      inkscape:window-height="1016"
      inkscape:window-x="86"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g91460" />
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2416">
     <rect
@@ -25364,8 +25364,8 @@
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="-48.181889"
-       y="257.91028"
+       x="-47.729763"
+       y="254.15039"
        id="text11792-5"
        inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
@@ -25373,13 +25373,13 @@
          sodipodi:role="line"
          id="tspan11790-3"
          style="font-size:6.35px;stroke-width:0.264583"
-         x="-48.181889"
-         y="257.91028">c. Lough Feeagh (IE): SHAP beeswarm plot</tspan></text>
+         x="-47.729763"
+         y="254.15039">c. Lough Feeagh (IE): SHAP beeswarm plot</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:6.35px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="136.23933"
-       y="257.67072"
+       x="135.64944"
+       y="253.81808"
        id="text11792-5-5"
        inkscape:export-filename="/home/dmercado/Documents/intoDBP/driver_attribution_fdom/figures/fig5.png"
        inkscape:export-xdpi="300"
@@ -25387,8 +25387,8 @@
          sodipodi:role="line"
          id="tspan11790-3-6"
          style="font-size:6.35px;stroke-width:0.264583"
-         x="136.23933"
-         y="257.67072">d. Sau Reservoir (ES): SHAP beeswarm plot</tspan></text>
+         x="135.64944"
+         y="253.81808">d. Sau Reservoir (ES): SHAP beeswarm plot</tspan></text>
     <g
        id="g3845"
        inkscape:label="partial_dependence_plots"

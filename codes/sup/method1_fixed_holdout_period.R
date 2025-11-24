@@ -2,7 +2,7 @@ library(lubridate)
 library(randomForest)
 
 set.seed(123)
-case_study <- "sau" #sau or  feeagh
+case_study <- "feeagh" #sau or  feeagh
 dir <- paste0("~/Documents/intoDBP/driver_attribution_fdom/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
@@ -66,7 +66,12 @@ testdata <- data[(n - n_holdout + 1):n, ]
 set.seed(123)
 tvar <- "fdom"
 formula <- as.formula(paste(tvar, "~ . - date"))
-RFfit <- randomForest(formula, data = traindata, ntree = 1000)
+if (case_study=="sau"){
+  RFfit <- randomForest(formula, data = traindata, ntree = 300, mtry=2)
+}
+if (case_study=="feeagh"){
+  RFfit <- randomForest(formula, data = traindata, ntree = 300, mtry=6)
+}
 
 importance_random <- importance(RFfit); importance_random
 importance_perc <- importance_random/sum(importance_random)*100

@@ -52,17 +52,22 @@ Below is a metadata description for this repository using the **Dublin Core** me
 ```
 driver_attribution_fdom/
 ├── README.md                # This file  
-├── data/                     # Raw and processed data  
-├── code/                     # Scripts (R, Python)  
-├── notebooks/                # Analysis notebooks  
-└── results/                  # Output figures and tables  
+├── feeagh/data/             # Raw and processed data for the first study site
+├── sau/data/                # Raw and processed data for the second study site
+├── codes                    # Scripts (R, Python) 
+├── feaagh/output/           # Output figures and tables for the first study site   
+├── sau/output/              # Output figures and tables for the secod study site  
+├── figures/                 # Figures used in the publication
+├── notebooks/               # Analysis notebooks (THIS WILL BE PROVIDED AFTER THE ACCEPTANCE OF PUBLICATION)
+├── catboost_info            # Auxiliary folder to run catboost method  
+└── old_codes                # Back-up folder with previuos codes used  
 ```
 
 ---
 
 ## License
 
- CC BY-NC 4.0
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ---
 
