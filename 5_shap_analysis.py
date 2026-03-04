@@ -11,8 +11,8 @@ from pathlib import Path
 script_dir = Path.cwd()
 
 # Set the directory used in R
-site = "feeagh" #feeagh or sau
-dir_path = script_dir / ".." / site / "output"
+site = "sau" #feeagh or sau
+dir_path = script_dir / site / "output"
 #dir_path = "~/Documents/intoDBP/driver_attribution_fdom/"+site+"/output/"
 dir_path = os.path.expanduser(dir_path)
 
