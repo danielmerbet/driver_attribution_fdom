@@ -1,0 +1,264 @@
+library(caret)
+library(randomForest)
+library(xgboost)
+library(lightgbm)
+library(catboost)
+library(kknn)
+library(kernlab)
+library(lubridate)
+library(dplyr)
+
+#if run in RStudio use this command:
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
+
+case_studies <- c("feeagh", "sau")
+for (case_study in case_studies){
+  dir <- paste0(getwd(),"/",case_study, "/")
+  print(dir)
+  
+  # Load data
+  data <- read.csv(paste0(dir, "data/data.csv"))
+  data$date <- as.Date(data$date)
+  
+  # Add cos of julian day
+  data$cyday <- cos(yday(data$date) * pi / 180)
+  
+  # Select columns
+  if (case_study == "sau") {
+    data <- data[, c("v", "st255", "sm100", "sm255", "doc_gwlf", "cyday", "fdom", "date")]
+  }
+  if (case_study == "feeagh") {
+    data <- data[, c("swt", "sr", "st100", "st255", "sm100", "sm255", "doc_gwlf", "cyday", "fdom", "date")]
+  }
+  
+  # Train/test split (last 15%)
+  n <- nrow(data)
+  n_holdout <- round(n * 0.15)
+  
+  train_data <- data[1:(n - n_holdout), ]
+  test_data <- data[(n - n_holdout + 1):n, ]
+  
+  
+  # Control for cross-validation
+  ctrl <- trainControl(method = "cv", number = 5)  # 5-fold CV
+  
+  #models to tune
+  modelMethods <- list(
+    rf = "rf",
+    xgb = "xgbTree",
+    lm = "lm",
+    knn = "knn",
+    svr = "svmRadial"
+  )
+  
+  #tuning grid ranges
+  tuneGrids <- list(
+    rf = expand.grid(mtry = c(2, 4, 6)),
+    xgb = expand.grid(nrounds = c(1000, 2000), max_depth = c(3, 6), eta = c(0.01, 0.05, 0.1), gamma = 0, colsample_bytree = 1, min_child_weight = 1, subsample = 1),
+    lm = NULL,
+    knn = expand.grid(k = c(3, 5, 7)),
+    svr = expand.grid(C = c(0.1, 1, 10), sigma = c(0.01, 0.1))
+  )
+  
+  set.seed(123)
+  
+  X_train <- train_data %>% select(-fdom, -date)
+  y_train <- train_data$fdom
+  
+  X_test <- test_data %>% select(-fdom, -date)
+  y_test <- test_data$fdom
+  
+  
+  tuned_models <- list()
+  train_pred_list <- list()
+  test_pred_list <- list()
+  
+  for (model_name in names(modelMethods)) {
+    method <- modelMethods[[model_name]]
+    tuneGrid <- tuneGrids[[model_name]]
+    
+    if (!is.null(tuneGrid)) {
+      cat("Tuning", model_name, "\n")
+      
+      model <- train(
+        fdom ~ .,
+        data = train_data,
+        method = method,
+        trControl = ctrl,
+        tuneGrid = tuneGrid,
+        importance = TRUE
+      )
+      
+    } else {
+      cat("Training", model_name, "\n")
+      model <- train(
+        fdom ~ .,
+        data = train_data,
+        method = method
+      )
+    }
+    
+    tuned_models[[model_name]] <- model
+    
+    # Predict
+    train_pred <- predict(model, newdata = train_data)
+    test_pred <- predict(model, newdata = test_data)
+    
+    train_pred_list[[model_name]] <- train_pred
+    test_pred_list[[model_name]] <- test_pred
+  }
+  
+  #get metrics results
+  # R2
+  r2 <- function(obs, pred) {
+    cor(obs, pred)^2
+  }
+  
+  # RMSE
+  rmse <- function(obs, pred) {
+    sqrt(mean((obs - pred)^2))
+  }
+  
+  # NSE
+  nse <- function(obs, pred) {
+    numerator <- sum((obs - pred)^2)
+    denominator <- sum((obs - mean(obs))^2)
+    1 - (numerator / denominator)
+  }
+  
+  # KGE
+  kge <- function(obs, pred) {
+    r <- cor(pred, obs, use = "pairwise.complete.obs")
+    alpha <- sd(pred, na.rm = TRUE) / sd(obs, na.rm = TRUE)
+    beta <- mean(pred, na.rm = TRUE) / mean(obs, na.rm = TRUE)
+    1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
+  }
+  
+  train_metrics_list <- list()
+  test_metrics_list <- list()
+  
+  for (model_name in names(tuned_models)) {
+    train_pred <- train_pred_list[[model_name]]
+    test_pred <- test_pred_list[[model_name]]
+    
+    train_metrics_list[[model_name]] <- list(
+      R2 = r2(y_train, train_pred),
+      RMSE = rmse(y_train, train_pred),
+      NSE = nse(y_train, train_pred),
+      KGE = kge(y_train, train_pred)
+    )
+    
+    test_metrics_list[[model_name]] <- list(
+      R2 = r2(y_test, test_pred),
+      RMSE = rmse(y_test, test_pred),
+      NSE = nse(y_test, test_pred),
+      KGE = kge(y_test, test_pred)
+    )
+  }
+  
+  save(tuned_models, file=paste0(dir,"output/hyperparameters/tuned_models.rdata"))
+  
+  #catboost and lightGBM can not be used in caret, 
+  #then we tuning independently
+  
+  library(lightgbm)
+  
+  # Define hyperparameter grid
+  grid_lgb <- expand.grid(
+    learning_rate = c(0.01, 0.05, 0.1),
+    num_leaves = c(15, 31, 63),
+    max_depth = c(5, 10, -1),
+    feature_fraction = c(0.8, 1),
+    bagging_fraction = c(0.8, 1)
+  )
+  
+  best_rmse <- Inf
+  best_model <- NULL
+  best_params <- list()
+  
+  for (i in 1:nrow(grid_lgb)) {
+    params <- list(
+      objective = "regression",
+      metric = "rmse",
+      learning_rate = grid_lgb$learning_rate[i],
+      num_leaves = grid_lgb$num_leaves[i],
+      max_depth = grid_lgb$max_depth[i],
+      feature_fraction = grid_lgb$feature_fraction[i],
+      bagging_fraction = grid_lgb$bagging_fraction[i]
+    )
+    
+    lgb_train <- lgb.Dataset(data = as.matrix(X_train), label = y_train)
+    
+    model <- lgb.train(params = params,
+                       data = lgb_train,
+                       nrounds = 2000,
+                       verbose = -1)
+    
+    preds <- predict(model, as.matrix(X_test))
+    current_rmse <- rmse(y_test, preds)
+    
+    if (current_rmse < best_rmse) {
+      best_rmse <- current_rmse
+      best_model <- model
+      best_params <- params
+    }
+  }
+  
+  best_params_lgb <- best_params
+  cat("Best LightGBM RMSE:", best_rmse, "\n")
+  print(best_params)
+  pred_lgb <- predict(best_model, as.matrix(X_test))
+  
+  save(best_params_lgb, file=paste0(dir,"output/hyperparameters/tuned_lgb.rdata"))
+  
+  tuned_models$lgb <- best_params_lgb
+  
+  library(catboost)
+  
+  # Define hyperparameter grid
+  grid_cat <- expand.grid(
+    rounds = c(300, 500, 1000),
+    depth = c(4, 6, 8),
+    learning_rate = c(0.01, 0.05, 0.1),
+    l2_leaf_reg = c(1, 3, 5)
+  )
+  
+  best_rmse <- Inf
+  best_model <- NULL
+  best_params <- list()
+  
+  train_pool <- catboost.load_pool(data = as.matrix(X_train), label = y_train)
+  test_pool <- catboost.load_pool(data = as.matrix(X_test))
+  
+  for (i in 1:nrow(grid_cat)) {
+    params <- list(
+      loss_function = "RMSE",
+      iterations = grid_cat$rounds[i],
+      depth = grid_cat$depth[i],
+      learning_rate = grid_cat$learning_rate[i],
+      l2_leaf_reg = grid_cat$l2_leaf_reg[i],
+      logging_level = "Silent"
+    )
+    
+    model <- catboost.train(train_pool, params = params)
+    preds <- catboost.predict(model, test_pool)
+    current_rmse <- rmse(y_test, preds)
+    
+    if (current_rmse < best_rmse) {
+      best_rmse <- current_rmse
+      best_model <- model
+      best_params <- params
+    }
+  }
+  
+  cat("Best CatBoost RMSE:", best_rmse, "\n")
+  print(best_params)
+  best_params_ctb <- best_params
+  pred_ctb <- catboost.predict(best_model, pool = test_pool)
+  save(best_params_ctb, file=paste0(dir,"output/hyperparameters/tuned_ctb.rdata"))
+  
+  tuned_models$ctb <- best_params_ctb
+  
+  save(tuned_models, file=paste0(dir,"output/hyperparameters/tuned_models.rdata"))
+  
+}

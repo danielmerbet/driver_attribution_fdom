@@ -36,6 +36,7 @@ Below is a metadata description for this repository using the **Dublin Core** me
 
 2. **Environment setup: libraries needed to run**
 
+   * The codes are designed to be run in the terminal or CMD, there is a commented option in the codes to also run from RStudio
    * R: lubridate, dplyr, caret, randomForest, xgboost, lightgbm, catboost, kknn, kernlab, DEoptim, pdp, ggplot2
    * Python: shap, xgboost, pandas, matplotlib.pyplot, os, lightgbm, catboost
 
