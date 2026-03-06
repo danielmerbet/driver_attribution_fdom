@@ -3,11 +3,11 @@ library(gridExtra) # for arranging multiple plots
 library(ggplot2)
 library(here)
 
-setwd(here())
+setwd(paste0(dirname(rstudioapi::getSourceEditorContext()$path), "/../"))
 
 set.seed(123)
 case_study <- "feeagh" #feeaghor sau
-dir <- paste0("../",case_study, "/")
+dir <- paste0(getwd(),"/",case_study, "/")
 #load drivers (meteorology, soil,  streamflow and all possible variables)
 data <- read.csv(paste0(dir, "data/data.csv"))
 data$date <- as.Date(data$date)
