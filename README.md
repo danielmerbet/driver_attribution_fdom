@@ -1,79 +1,264 @@
-# driver_attribution_fdom
+# Driver Attribution of Fluorescent Dissolved Organic Matter (fDOM)
 
-This repository contains code and data for analyzing the drivers of fDOM (fluorescent Dissolved Organic Matter) attribution. It contails all codes and data used in the preprint: [**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**](https://doi.org/10.5194/egusphere-2025-4049) 
+![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-blue)
+![Language](https://img.shields.io/badge/language-R%20%7C%20Python-orange)
+![Status](https://img.shields.io/badge/status-research-green)
 
----
+Repository containing **data and machine learning workflows** used to identify environmental drivers controlling **fluorescent dissolved organic matter (fDOM)** dynamics in freshwater systems.
 
-## Getting Started
+The repository accompanies the preprint:
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/danielmerbet/driver_attribution_fdom.git  
-   cd driver_attribution_fdom  
-````
+**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**
 
-2. **Environment setup: libraries needed to run**
-
-   * The R and python codes are designed to be run in RStudio
-   * R libraries: lubridate, dplyr, caret, randomForest, xgboost, lightgbm, catboost, kknn, kernlab, DEoptim, pdp, ggplot2
-   * Python packages: shap, xgboost, pandas, matplotlib.pyplot, os, lightgbm, catboost
-
-
-3. **Run analyses**
-
-   * Use the scripts from 1_ to 5_ to reproduce the analysis
-   * Notebooks in `/notebooks/` show step-by-step analysis (THIS WILL BE PROVIDED ONCE THE PUBLICATION IS ACCEPTED)
+[https://doi.org/10.5194/egusphere-2025-4049](https://doi.org/10.5194/egusphere-2025-4049)
 
 ---
 
-## Directory Structure
+# Overview
+
+Dissolved organic matter (DOM) dynamics are influenced by multiple environmental drivers including hydrology, meteorology, and seasonal cycles. This repository provides:
+
+* Data used in the study
+* Machine learning workflows
+* Feature importance analysis
+* SHAP interpretation of models
+* Scripts to reproduce all results
+
+The workflow combines multiple machine learning algorithms:
+
+* Random Forest
+* XGBoost
+* LightGBM
+* CatBoost
+* Kernel methods
+* k-nearest neighbors
+
+These models are used to identify the most influential drivers controlling **fDOM variability** across two contrasting freshwater systems.
+
+---
+
+# Study Sites
+
+Two study sites were analyzed:
+
+| Site          | Country | Description                                           |
+| ------------- | ------- | ----------------------------------------------------- |
+| Feeagh        | Ireland | Atlantic catchment with strong hydrological influence |
+| Sau Reservoir | Spain   | Mediterranean reservoir with seasonal stratification  |
+
+---
+
+# Repository Structure
 
 ```
 driver_attribution_fdom/
-├── README.md                # This file  
-├── 1_hyperparameter_tuning.R            # Runs hyperparameter tuning for all machine learning models used in the study
-├── 2_MLrun_most-influential-features    # Runs the first simulation using the most influential drivers (features)
-├── 3_MLrun_reanalysis-julianday         # Runs the second simulation using reanalysis data and Julian day
-├── 4_extract_importance                 # Extract the importance of the drivers (features) from multiple machine learning models
-├── 5_shap_analysis.py                   # Contains the SHAP (SHapley Additive exPlanations) analysis 
-├── feeagh/data/             # Raw and processed data for the first study site
-├── sau/data/                # Raw and processed data for the second study site
-├── codes_supplementary      # Scripts used for supplementary material 
-├── feaagh/output/           # Output figures and tables for the first study site   
-├── sau/output/              # Output figures and tables for the secod study site  
-├── figures/                 # Figures used in the publication
-└── old_codes                # Back-up folder with previuos codes used  
+│
+├── README.md
+│
+├── 1_hyperparameter_tuning.R
+│     Hyperparameter optimization for all ML models
+│
+├── 2_MLrun_most-influential-features.R
+│     ML simulations using selected drivers
+│
+├── 3_MLrun_reanalysis-julianday.R
+│     ML simulations using reanalysis meteorology + seasonal predictors
+│
+├── 4_extract_importance.R
+│     Extraction of feature importance across ML models
+│
+├── 5_shap_analysis.py
+│     SHAP analysis for model interpretation
+│
+├── feeagh/
+│     ├── data/
+│     └── output/
+│
+├── sau/
+│     ├── data/
+│     └── output/
+│
+├── figures/
+│     Figures used in the manuscript
+│
+├── codes_supplementary/
+│     Additional scripts used in supplementary analyses
+│
+└── old_codes/
+      Archived development scripts
 ```
 
 ---
 
-## Metadata 
+# Workflow
 
-Below is a metadata description for this repository using the **Dublin Core** metadata standard. The [Dublin Core Metadata Element Set](https://www.dublincore.org/specifications/dublin-core/dces/) is a widely adopted, generic schema for describing digital resources.
-
-| Dublin Core Element | Value |
-|---|---|
-| **Title** | Driver Attribution of FDOM Dataset and Analysis |
-| **Creator** | Daniel Mercado Bettin | Ricardo Marroquín
-| **Subject** | Fluorescent Dissolved Organic Matter, water quality, environmental drivers, limnology |
-| **Description** | Code and data to identify and quantify the drivers behind FDOM variability using statistical and machine-learning methods. This includes scripts, analysis notebooks, and raw/processed data. |
-| **Publisher** | CSIC and DCU |
-| **Date** | 2025-08-01 (or the date when version was published) |
-| **Type** | Dataset / Research Code |
-| **Format** | Directory of `.R`, `.py` scripts; CSV data files
-| **Identifier** | `https://github.com/danielmerbet/driver_attribution_fdom` |
-| **Language** | English |
-| **Relation** | A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems: https://doi.org/10.5194/egusphere-2025-4049|
-| **Coverage** | Daily resolution, applied to two case studies in Spain and Ireland, but could be applied globally |
-| **Rights** | CC BY-NC 4.0 license |
-
-
----
-
-## License
-
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
-
----
+The full analysis pipeline consists of five main steps.
 
 ```
+Data preprocessing
+        │
+        ▼
+Hyperparameter tuning
+        │
+        ▼
+Machine learning simulations
+        │
+        ▼
+Feature importance extraction
+        │
+        ▼
+SHAP model interpretation
+```
+
+Scripts should be executed sequentially:
+
+```
+1 → 2 → 3 → 4 → 5
+```
+
+---
+
+# Installation
+
+## Clone repository
+
+```bash
+git clone https://github.com/danielmerbet/driver_attribution_fdom.git
+cd driver_attribution_fdom
+```
+
+---
+
+# Software Requirements
+
+The analysis was developed using **R and Python**.
+
+## R packages
+
+```
+lubridate
+dplyr
+caret
+randomForest
+xgboost
+lightgbm
+catboost
+kknn
+kernlab
+DEoptim
+pdp
+ggplot2
+```
+
+Install them with:
+
+```r
+install.packages(c(
+"lubridate","dplyr","caret","randomForest","xgboost",
+"lightgbm","catboost","kknn","kernlab","DEoptim",
+"pdp","ggplot2"))
+```
+
+---
+
+## Python packages
+
+```
+shap
+xgboost
+pandas
+matplotlib
+lightgbm
+catboost
+```
+
+Install with:
+
+```bash
+pip install shap xgboost pandas matplotlib lightgbm catboost
+```
+
+---
+
+# Running the Analysis
+
+To reproduce the full workflow:
+
+### Step 1 — Hyperparameter tuning
+
+```
+1_hyperparameter_tuning.R
+```
+
+### Step 2 — ML simulation (most influential drivers)
+
+```
+2_MLrun_most-influential-features.R
+```
+
+### Step 3 — ML simulation (reanalysis + Julian day)
+
+```
+3_MLrun_reanalysis-julianday.R
+```
+
+### Step 4 — Feature importance extraction
+
+```
+4_extract_importance.R
+```
+
+### Step 5 — Model interpretation with SHAP
+
+```
+5_shap_analysis.py
+```
+
+---
+
+# Reproducibility
+
+This repository contains:
+
+* raw and processed datasets
+* scripts used for analysis
+* scripts for generating figures
+
+---
+
+# Citation
+
+If you use this repository, please cite:
+
+Mercado-Bettin, D., Marroquín, R.
+**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**
+
+[https://doi.org/10.5194/egusphere-2025-4049](https://doi.org/10.5194/egusphere-2025-4049)
+
+---
+
+# Metadata (Dublin Core)
+
+| Element     | Value                                                                                   |
+| ----------- | --------------------------------------------------------------------------------------- |
+| Title       | Driver Attribution of FDOM Dataset and Analysis                                         |
+| Creator     | Daniel Mercado Bettin; Ricardo Marroquín                                                |
+| Subject     | Fluorescent Dissolved Organic Matter, water quality, limnology                          |
+| Description | Code and data used to identify drivers controlling FDOM dynamics using machine learning |
+| Publisher   | CSIC; Dublin City University                                                            |
+| Type        | Dataset / Research Code                                                                 |
+| Format      | `.R`, `.py`, `.csv`                                                                     |
+| Language    | English                                                                                 |
+| Coverage    | Case studies in Spain and Ireland                                                       |
+| Rights      | CC BY-NC 4.0                                                                            |
+
+---
+
+# License
+
+This repository is licensed under the **Creative Commons Attribution–NonCommercial 4.0 International License**.
+
+[https://creativecommons.org/licenses/by-nc/4.0/](https://creativecommons.org/licenses/by-nc/4.0/)
+
+---
+
