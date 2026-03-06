@@ -230,8 +230,7 @@ This repository contains:
 
 If you use this repository, please cite:
 
-Mercado-Bettin, D., Marroquín, R.
-**A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems**
+Mercado-Bettín, D., Paíz, R., McCarthy, V., Jennings, E., de Eyto, E., Gallegos, A. M., ... & Marcé, R. (2025). A machine learning approach to driver attribution of dissolved organic matter dynamics in two contrasting freshwater systems. EGUsphere, 2025, 1-26.
 
 [https://doi.org/10.5194/egusphere-2025-4049](https://doi.org/10.5194/egusphere-2025-4049)
 
