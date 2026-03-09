@@ -1,12 +1,163 @@
 library(lubridate)
 library(dplyr)
 
+library(lubridate)
+library(dplyr)
+
+case_study <- "sau" #select one: feeagh or sau
+model_name_toplot <- "CTB" #select one: c("RF", "XGB", "LGB", "CTB", "LM", "KNN", "SVR", "Blended)
+
+#if run in RStudio use this command:
 setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 
-
-case_study <- "sau" #feeagh or sau
 dir <- paste0(getwd(),"/",case_study, "/")
 
+#Tuned hyperparameters were obtained in the previous code (2_hyperparameter_tuning.R)
+#the best combination of hyperparameters were used here
+
+# Load data
+data <- read.csv(paste0(dir, "data/data.csv"))
+data$date <- as.Date(data$date)
+
+# Add cos of julian day
+data$cyday <- cos(yday(data$date) * pi / 180)
+
+# Select columns
+#if (case_study=="feeagh"){
+#  data <- data[, c("swt", "sr", "st100", "st255", "sm100", "sm255", "doc_gwlf", "cyday", "fdom", "date")]
+#}
+#if (case_study=="sau"){
+#  data <- data[, c("v", "st255", "sm100", "sm255", "cyday", "fdom", "date")] # "doc_gwlf",
+#}
+
+#load hyperparameters
+load(paste0(dir, "output/hyperparameters/tuned_models.rdata"))
+
+# Train/test split (last 15%)
+n <- nrow(data)
+n_holdout <- round(n * 0.15)
+
+train_data <- data[1:(n - n_holdout), ]
+test_data <- data[(n - n_holdout + 1):n, ]
+
+# Remove date
+X_train <- train_data %>% select(-fdom, -date)
+y_train <- train_data$fdom
+
+X_test <- test_data %>% select(-fdom, -date)
+y_test <- test_data$fdom
+
+#METRICS
+# R2
+r2 <- function(obs, pred) {
+  cor(obs, pred)^2
+}
+
+# RMSE
+rmse <- function(obs, pred) {
+  sqrt(mean((obs - pred)^2))
+}
+
+# NSE
+nse <- function(obs, pred) {
+  numerator <- sum((obs - pred)^2)
+  denominator <- sum((obs - mean(obs))^2)
+  1 - (numerator / denominator)
+}
+
+# KGE
+kge <- function(obs, pred) {
+  r <- cor(pred, obs, use = "pairwise.complete.obs")
+  alpha <- sd(pred, na.rm = TRUE) / sd(obs, na.rm = TRUE)
+  beta <- mean(pred, na.rm = TRUE) / mean(obs, na.rm = TRUE)
+  1 - sqrt((r - 1)^2 + (alpha - 1)^2 + (beta - 1)^2)
+}
+
+preds_training <- c()
+#MACHINE LEARNING METHODS
+library(randomForest)
+set.seed(123)
+rf <- randomForest(fdom ~ . -date, data = train_data, ntree = 1000, 
+                   mtry=tuned_models$rf$bestTune$mtry)
+pred_rf <- predict(rf, newdata = test_data)
+preds_training <- cbind(preds_training,
+                        predict(rf, newdata = train_data))
+write.csv(importance(rf)/sum(importance(rf)), 
+          file=paste0(dir,"output/importance/imp_rf.csv"),
+          quote = F)
+
+library(xgboost)
+set.seed(123)
+dtrain <- xgb.DMatrix(data = as.matrix(X_train), label = y_train)
+dtest <- xgb.DMatrix(data = as.matrix(X_test))
+
+params <- list(objective = "reg:squarederror", 
+               max_depth = tuned_models$xgb$bestTune$max_depth,
+               eta=tuned_models$xgb$bestTune$eta, 
+               gamma=tuned_models$xgb$bestTune$gamma,
+               colsample_bytree= tuned_models$xgb$bestTune$colsample_bytree,
+               min_child_weight=tuned_models$xgb$bestTune$min_child_weight,
+               subsample=tuned_models$xgb$bestTune$subsample)
+xgb_model <- xgb.train(params = params, data = dtrain, nrounds = tuned_models$xgb$bestTune$nrounds)
+pred_xgb <- predict(xgb_model, newdata = dtest)
+xgb.importance(model = xgb_model)
+preds_training <- cbind(preds_training,
+                        predict(xgb_model, newdata = dtrain))
+write.csv(xgb.importance(model = xgb_model), 
+          file=paste0(dir,"output/importance/imp_xgb.csv"),
+          quote = F)
+
+library(lightgbm)
+set.seed(123)
+lgb_train <- lgb.Dataset(data = as.matrix(X_train), label = y_train)
+params <- list(
+  objective = tuned_models$lgb$objective,
+  metric = tuned_models$lgb$metric,
+  learning_rate = tuned_models$lgb$learning_rate,
+  num_leaves = tuned_models$lgb$num_leaves,
+  max_depth = tuned_models$lgb$max_depth,
+  feature_fraction = tuned_models$lgb$feature_fraction,
+  bagging_fraction = tuned_models$lgb$bagging_fraction
+)
+lgb_model <- lgb.train(params = params, 
+                       data = lgb_train, nrounds = 2000)
+pred_lgb <- predict(lgb_model, newdata = as.matrix(X_test))
+preds_training <- cbind(preds_training, predict(lgb_model, newdata = as.matrix(X_train)))
+
+
+lgb.importance(lgb_model)
+write.csv(lgb.importance(lgb_model), 
+          file=paste0(dir,"output/importance/imp_lgb.csv"),
+          quote = F)
+
+library(catboost)
+set.seed(123)
+train_pool <- catboost.load_pool(data = as.matrix(X_train), label = y_train)
+test_pool <- catboost.load_pool(data = as.matrix(X_test))
+
+params <- list(
+  loss_function = tuned_models$ctb$loss_function, 
+  iterations = tuned_models$ctb$iterations,
+  depth = tuned_models$ctb$depth,
+  learning_rate = tuned_models$ctb$learning_rate,
+  l2_leaf_reg = tuned_models$ctb$l2_leaf_reg,
+  logging_level = tuned_models$ctb$logging_level
+)
+cat_model <- catboost.train(learn_pool = train_pool, 
+                            params = params)
+pred_ctb <- catboost.predict(cat_model, pool = test_pool)
+preds_training <- cbind(preds_training,
+                        catboost.predict(cat_model, pool = train_pool))
+data.frame(var=colnames(X_train),
+           importance=catboost.get_feature_importance(cat_model)/sum(catboost.get_feature_importance(cat_model)))
+
+write.csv(data.frame(var=colnames(X_train),
+                     importance=catboost.get_feature_importance(cat_model)/sum(catboost.get_feature_importance(cat_model))), 
+          file=paste0(dir,"output/importance/imp_cbt.csv"),
+          quote = F)
+
+
+# Extract importance
 rf <- read.csv(paste0(dir,"output/importance/imp_rf.csv"))
 colnames(rf) <- c("feature", "importance")
 xgb <- read.csv(paste0(dir,"output/importance/imp_xgb.csv"))

@@ -43,8 +43,8 @@ Two study sites were analyzed:
 
 | Site          | Country | Description                                           |
 | ------------- | ------- | ----------------------------------------------------- |
-| Feeagh        | Ireland | Atlantic catchment with strong hydrological influence |
-| Sau Reservoir | Spain   | Mediterranean reservoir with seasonal stratification  |
+| Feeagh        | Ireland | humic oligotrophic lake with a peatland-dominated catchment and temperate oceanic climate |
+| Sau Reservoir | Spain   | eutrophic reservoir with a human-influenced catchment and Mediterranean climate  |
 
 ---
 
