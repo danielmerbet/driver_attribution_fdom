@@ -6,7 +6,7 @@
 
 Repository containing **data and machine learning workflows** used to identify environmental drivers controlling **fluorescent dissolved organic matter (fDOM)** dynamics in freshwater systems:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.19354955)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19354955.svg)](https://doi.org/10.5281/zenodo.19354955)
 
 The repository accompanies the preprint:
 
